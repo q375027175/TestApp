@@ -1,0 +1,132 @@
+//
+//  ViewController.m
+//  testApp
+//
+//  Created by juge on 2017/10/23.
+//  Copyright © 2017年 juge. All rights reserved.
+//
+
+#import "ViewController.h"
+#import "PlaceViewController.h"
+#import "DouyuViewController.h"
+#import "KaidengViewController.h"
+#import "JiequUrlViewController.h"
+#import "UITableView+NoDataView.h"
+#import "JiequURLUIWebviewViewController.h"
+#import "HuaDongYemianViewController.h"
+#import "dianhuabenViewController.h"
+
+#import <sys/socket.h>
+#import <netinet/in.h>
+#import <arpa/inet.h>
+#import <unistd.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
+#import <SystemConfiguration/SCNetworkReachability.h>
+#include <netdb.h>
+#include <ifaddrs.h>
+#include <net/if.h>
+#include <arpa/inet.h>
+#include <net/if_dl.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#import <unistd.h>
+#import <SystemConfiguration/CaptiveNetwork.h>
+#import <SystemConfiguration/SCNetworkReachability.h>
+#include <netdb.h>
+#include <ifaddrs.h>
+#include <net/if.h>
+#include <arpa/inet.h>
+#include <net/if_dl.h>
+#include <sys/ioctl.h>
+#import <DateTools.h>
+
+@interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSArray *array;
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setScrollToBack];
+    self.title = @"首页";
+    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"滑动页面",@"电话本"];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.tableView];
+    self.tableView.showMessage = @"啥也没有";
+    [self.tableView reloadData];
+    
+    
+    NSDate *date = [NSDate date];
+    NSMutableArray *muArr = [NSMutableArray array];
+    for (NSInteger i = 1; i <= date.daysInMonth; i ++) {
+        NSDate *firstDate = [NSDate dateWithYear:date.year month:date.month day:i];
+        [muArr addObject:@{@"days":@(i), @"weekday":@(firstDate.weekday)}];
+    }
+    
+    NSInteger weekDay1 = 7 - [muArr.firstObject[@"weekday"] integerValue];
+    for (NSInteger i = 0; i < weekDay1; i ++) {
+        [muArr insertObject:@{} atIndex:0];
+    }
+    
+    NSInteger weekDay2 = 7 - [muArr.lastObject[@"weekday"] integerValue];
+    for (NSInteger i = 0; i < weekDay2; i ++) {
+        [muArr addObject:@{}];
+    }
+    CGLog(@"%@", muArr);
+    
+}
+
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"cell"];
+    }
+    cell.textLabel.text = self.array[indexPath.row];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.array.count;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIViewController *vc = nil;
+    if ([self.array[indexPath.row] isEqualToString:@"附近有啥"]) {
+        vc = [[PlaceViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"直播"]) {
+        vc = [[DouyuViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"手电筒"]) {
+        vc = [[KaidengViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"解析网页"]) {
+        vc = [[JiequUrlViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"解析网页UIWebView"]) {
+        vc = [[JiequURLUIWebviewViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"滑动页面"]) {
+        vc = [[HuaDongYemianViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"电话本"]) {
+        vc = [[dianhuabenViewController alloc] init];
+    }
+    if (vc) {
+        vc.title = self.array[indexPath.row];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+- (UITableView *)tableView {
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStylePlain)];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.tableFooterView = [[UIView alloc] init];
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+    }
+    return _tableView;
+}
+
+@end
