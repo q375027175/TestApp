@@ -34,6 +34,7 @@
 		91FA45101FA83F9000C4AF82 /* dianhuabenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FA450F1FA83F9000C4AF82 /* dianhuabenManager.m */; };
 		91FA45131FA8406100C4AF82 /* dianhuabenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FA45121FA8406100C4AF82 /* dianhuabenModel.m */; };
 		91FF3A471F9DF5AE005A0C19 /* TencentLBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FF3A461F9DF5AE005A0C19 /* TencentLBS.framework */; };
+		A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930921FBD5945005B680F /* BaseNavigationController.m */; };
 		CF7187F3236F5067B25CD992 /* libPods-testAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CD8CCC2BF0BA2F1B3F8142 /* libPods-testAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +111,8 @@
 		91FA45121FA8406100C4AF82 /* dianhuabenModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dianhuabenModel.m; sourceTree = "<group>"; };
 		91FF3A461F9DF5AE005A0C19 /* TencentLBS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentLBS.framework; sourceTree = "<group>"; };
 		95F25937067BE1612627F0D3 /* Pods-testApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testApp/Pods-testApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A1B930911FBD5945005B680F /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		A1B930921FBD5945005B680F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		B1CD8CCC2BF0BA2F1B3F8142 /* libPods-testAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8029E575A1BD62154268023 /* Pods-testAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testAppUITests/Pods-testAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F99855FDEB52460201F6349F /* libPods-testApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +264,8 @@
 				91FA45001FA70B6C00C4AF82 /* BaseViewController.m */,
 				91FA45021FA80D9100C4AF82 /* BaseUITableView.h */,
 				91FA45031FA80D9100C4AF82 /* BaseUITableView.m */,
+				A1B930911FBD5945005B680F /* BaseNavigationController.h */,
+				A1B930921FBD5945005B680F /* BaseNavigationController.m */,
 			);
 			path = BaseObject;
 			sourceTree = "<group>";
@@ -642,6 +647,7 @@
 				91FA45091FA80F1B00C4AF82 /* HuaDongYemianViewController.m in Sources */,
 				91FA45101FA83F9000C4AF82 /* dianhuabenManager.m in Sources */,
 				91D97A421FAC766E00AF9865 /* HuadongHeaderView.m in Sources */,
+				A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */,
 				918E09AB1F9DCA1100882F65 /* TYPlaceManager.m in Sources */,
 				918E097C1F9DCA0500882F65 /* ViewController.m in Sources */,
 				91FA45011FA70B6C00C4AF82 /* BaseViewController.m in Sources */,
