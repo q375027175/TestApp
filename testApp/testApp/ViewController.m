@@ -14,6 +14,7 @@
 #import "UITableView+NoDataView.h"
 #import "JiequURLUIWebviewViewController.h"
 #import "HuaDongYemianViewController.h"
+#import "THuadongViewController.h"
 #import "dianhuabenViewController.h"
 
 #import <sys/socket.h>
@@ -51,7 +52,7 @@
     [super viewDidLoad];
     [self setScrollToBack];
     self.title = @"首页";
-    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"滑动页面",@"电话本"];
+    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面",@"电话本"];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.showMessage = @"啥也没有";
@@ -105,8 +106,10 @@
         vc = [[JiequUrlViewController alloc] init];
     } else if ([self.array[indexPath.row] isEqualToString:@"解析网页UIWebView"]) {
         vc = [[JiequURLUIWebviewViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"滑动页面"]) {
+    } else if ([self.array[indexPath.row] isEqualToString:@"scroll滑动页面"]) {
         vc = [[HuaDongYemianViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"tableview滑动页面"]) {
+        vc = [[THuadongViewController alloc] init];
     } else if ([self.array[indexPath.row] isEqualToString:@"电话本"]) {
         vc = [[dianhuabenViewController alloc] init];
     }
@@ -122,9 +125,10 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [[UIView alloc] init];
-        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedRowHeight = 44.0;
         _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
     }
     return _tableView;
 }

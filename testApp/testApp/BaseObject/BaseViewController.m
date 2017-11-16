@@ -21,9 +21,10 @@
         self.edgesForExtendedLayout = UIRectEdgeNone;
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
-    
-    [self initNavigationBar];
-    [self setNavigationBackItem];
+    self.navigationController.navigationBar.translucent = NO;
+
+//    [self initNavigationBar];
+//    [self setNavigationBackItem];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
