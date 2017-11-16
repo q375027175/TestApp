@@ -25,6 +25,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AMapServices sharedServices].apiKey = @"6ed9c493b110856b3f4464839da0b8c2";
     [UITableView replaceMethod]; // tableView 无数据页面
+    
+    if (@available(iOS 11, *)) { // iOS 11 tableview 适配
+        [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
+
     ViewController *vc = [[ViewController alloc] init];
     self.window.rootViewController = [vc getNavigationConller];
     return YES;
