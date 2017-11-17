@@ -94,7 +94,9 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    if(scrollView != self.scroll) {
+    NSInteger index = self.scroll.contentOffset.x / kWIDTH;
+    if(scrollView == self.array[index]) { /// 防止移动其他tableview影响界面
+
 /// 处理headerview的位置
         CGRect headerRect = self.headerView.frame;
         CGFloat offsetY = scrollView.contentOffset.y;
