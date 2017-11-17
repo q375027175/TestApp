@@ -97,14 +97,14 @@
     NSInteger index = self.scroll.contentOffset.x / kWIDTH;
     if(scrollView != self.array[index]) return; /// 防止移动其他tableview影响界面
     
-    /// 处理headerview的位置
+/// 处理headerview的位置
     CGRect headerRect = self.headerView.frame;
     CGFloat offsetY = scrollView.contentOffset.y;
     if(offsetY < 0) {
         headerRect.origin.y = -offsetY - 200;
-        //            if(headerRect.origin.y > 0) {  // headerview禁止随着tableview下拉
-        //                headerRect.origin.y = 0;
-        //            }
+//        if(headerRect.origin.y > 0) {  // headerview禁止随着tableview下拉
+//            headerRect.origin.y = 0;
+//        }
         
         self.headerView.frame = headerRect;
     }
@@ -113,7 +113,7 @@
         self.headerView.frame = headerRect;
     }
     
-    ///  处理未显示的tableview的contentoffset   在headerview 显示出来的时候，保证所有tableview的同步
+///  处理未显示的tableview的contentoffset   在headerview 显示出来的时候，保证所有tableview的同步
     if (offsetY > -200) {
         for (UITableView *table in self.array) {
             if (table != scrollView) {
