@@ -16,6 +16,7 @@
 #import "HuaDongYemianViewController.h"
 #import "THuadongViewController.h"
 #import "dianhuabenViewController.h"
+#import "QHuadongViewController.h"
 
 #import <sys/socket.h>
 #import <netinet/in.h>
@@ -52,12 +53,11 @@
     [super viewDidLoad];
     [self setScrollToBack];
     self.title = @"首页";
-    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面",@"电话本"];
+    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本"];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.showMessage = @"啥也没有";
     [self.tableView reloadData];
-    
     
     NSDate *date = [NSDate date];
     NSMutableArray *muArr = [NSMutableArray array];
@@ -112,7 +112,10 @@
         vc = [[THuadongViewController alloc] init];
     } else if ([self.array[indexPath.row] isEqualToString:@"电话本"]) {
         vc = [[dianhuabenViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"Q滑动页面"]) {
+        vc = [[QHuadongViewController alloc] init];
     }
+    
     if (vc) {
         vc.title = self.array[indexPath.row];
         [self.navigationController pushViewController:vc animated:YES];
