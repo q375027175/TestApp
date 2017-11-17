@@ -36,7 +36,7 @@
     UIEdgeInsets inset1 = self.table2.contentInset;
     inset1.top = 200;
     self.table1.contentInset = inset1;
-
+    
     [self.scroll addSubview:self.table1];
     
     self.table2 = [[UITableView alloc]initWithFrame:CGRectZero style:(UITableViewStylePlain)];
@@ -45,7 +45,7 @@
     UIEdgeInsets inset2 = self.table2.contentInset;
     inset2.top = 200;
     self.table2.contentInset = inset2;
-
+    
     [self.scroll addSubview:self.table2];
     
     [self.scroll mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -95,40 +95,41 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     NSInteger index = self.scroll.contentOffset.x / kWIDTH;
-    if(scrollView == self.array[index]) { /// 防止移动其他tableview影响界面
-
-/// 处理headerview的位置
-        CGRect headerRect = self.headerView.frame;
-        CGFloat offsetY = scrollView.contentOffset.y;
-        if(offsetY < 0) {
-            headerRect.origin.y = -offsetY - 200;
-//            if(headerRect.origin.y > 0) {  // headerview禁止随着tableview下拉
-//                headerRect.origin.y = 0;
-//            }
-            
-            self.headerView.frame = headerRect;
-        }
-        if (offsetY >= 0) {
-            headerRect.origin.y = -200;
-            self.headerView.frame = headerRect;
-        }
+    if(scrollView != self.array[index]) return; /// 防止移动其他tableview影响界面
+    
+    /// 处理headerview的位置
+    CGRect headerRect = self.headerView.frame;
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if(offsetY < 0) {
+        headerRect.origin.y = -offsetY - 200;
+        //            if(headerRect.origin.y > 0) {  // headerview禁止随着tableview下拉
+        //                headerRect.origin.y = 0;
+        //            }
         
-///  处理未显示的tableview的contentoffset   在headerview 显示出来的时候，保证所有tableview的同步
-        if (scrollView.contentOffset.y > -200) {
-            for (UITableView *table in self.array) {
-                if (table != scrollView) {
-                    if (offsetY > 0 && table.contentOffset.y < 0) {
-                        offsetY = 0;
-                        table.contentOffset = CGPointMake(0, offsetY);
-                    }
-                    
-                    if (offsetY < 0) {
-                        if (offsetY < -200) {
-                            offsetY = -200;
-                        }
-                        table.contentOffset = CGPointMake(0, offsetY);
-                    }
+        self.headerView.frame = headerRect;
+    }
+    if (offsetY >= 0) { // 当tableview 移动到最上方的时候强制写死headerview位置
+        headerRect.origin.y = -200;
+        self.headerView.frame = headerRect;
+    }
+    
+    ///  处理未显示的tableview的contentoffset   在headerview 显示出来的时候，保证所有tableview的同步
+    if (offsetY > -200) {
+        for (UITableView *table in self.array) {
+            if (table != scrollView) {
+                if (offsetY > 0 && table.contentOffset.y < 0){ /// headerview移出屏幕
+                    table.contentOffset = CGPointMake(0, 0);
                 }
+                
+                if (offsetY <= 0) { // headerview开始出现在屏幕
+                    table.contentOffset = CGPointMake(0, offsetY);
+                }
+            }
+        }
+    } else if (offsetY < -200) { // 超出最大偏移量的处理
+        for (UITableView *table in self.array) {
+            if (table != scrollView) {
+                table.contentOffset = CGPointMake(0, -200);
             }
         }
     }
