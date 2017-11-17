@@ -113,7 +113,7 @@
             self.headerView.frame = headerRect;
         }
         
-///  处理未显示的tableview的contentoffset
+///  处理未显示的tableview的contentoffset   在headerview 显示出来的时候，保证所有tableview的同步
         if (scrollView.contentOffset.y > -200) {
             for (UITableView *table in self.array) {
                 if (table != scrollView) {
@@ -121,8 +121,12 @@
                         offsetY = 0;
                         table.contentOffset = CGPointMake(0, offsetY);
                     }
+                    
                     if (offsetY < 0) {
-                        table.contentOffset = CGPointMake(0, -200);
+                        if (offsetY < -200) {
+                            offsetY = -200;
+                        }
+                        table.contentOffset = CGPointMake(0, offsetY);
                     }
                 }
             }
