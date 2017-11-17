@@ -116,6 +116,7 @@
         _table.dataSource = self;
         [_table registerClass:[THuadongTableViewCell class] forCellReuseIdentifier:@"cell"];
         _table.tableHeaderView = [self headerView];
+        _table.scrollsToTop = NO; //每个页面只能有一个scrollview 能设置为YES
     }
     return _table;
 }
