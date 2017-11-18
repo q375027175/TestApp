@@ -8,8 +8,6 @@
 
 #import "QHuadongViewController.h"
 #import "HuadongHeaderView.h"
-#define kWIDTH [UIScreen mainScreen].bounds.size.width
-#define kHEIGHT [UIScreen mainScreen].bounds.size.height
 
 @interface QHuadongViewController ()<UITableViewDataSource, UITableViewDelegate>
 

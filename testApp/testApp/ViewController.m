@@ -17,6 +17,7 @@
 #import "THuadongViewController.h"
 #import "dianhuabenViewController.h"
 #import "QHuadongViewController.h"
+#import "CalendarViewController.h"
 
 #import <sys/socket.h>
 #import <netinet/in.h>
@@ -53,7 +54,7 @@
     [super viewDidLoad];
     [self setScrollToBack];
     self.title = @"首页";
-    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本"];
+    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历"];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.showMessage = @"啥也没有";
@@ -75,8 +76,7 @@
     for (NSInteger i = 0; i < weekDay2; i ++) {
         [muArr addObject:@{}];
     }
-    CGLog(@"%@", muArr);
-    
+//    CGLog(@"%@", muArr);    
 }
 
 
@@ -114,6 +114,8 @@
         vc = [[dianhuabenViewController alloc] init];
     } else if ([self.array[indexPath.row] isEqualToString:@"Q滑动页面"]) {
         vc = [[QHuadongViewController alloc] init];
+    } else if ([self.array[indexPath.row] isEqualToString:@"日历"]) {
+        vc = [[CalendarViewController alloc] init];
     }
     
     if (vc) {

@@ -36,6 +36,12 @@
 		91FF3A471F9DF5AE005A0C19 /* TencentLBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FF3A461F9DF5AE005A0C19 /* TencentLBS.framework */; };
 		A10105911FBEBF21009FD11D /* QHuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105901FBEBF21009FD11D /* QHuadongViewController.m */; };
 		A10105941FBEE26F009FD11D /* UIScrollView+QKBack.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105931FBEE26F009FD11D /* UIScrollView+QKBack.m */; };
+		A10105A11FBFC62B009FD11D /* QKTourCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105991FBFC62A009FD11D /* QKTourCalendarView.m */; };
+		A10105A21FBFC62B009FD11D /* QKTourCalendarCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A101059A1FBFC62A009FD11D /* QKTourCalendarCollectionViewCell.m */; };
+		A10105A31FBFC62B009FD11D /* QKTourCalendarDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = A101059D1FBFC62B009FD11D /* QKTourCalendarDatasource.m */; };
+		A10105A41FBFC62B009FD11D /* QKCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A101059F1FBFC62B009FD11D /* QKCalendarModel.m */; };
+		A10105A71FBFC643009FD11D /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A61FBFC643009FD11D /* CalendarViewController.m */; };
+		A10105AA1FBFC7DA009FD11D /* QKTourApplyDateMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */; };
 		A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930921FBD5945005B680F /* BaseNavigationController.m */; };
 		A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930951FBD81C0005B680F /* THuadongViewController.m */; };
 		A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930991FBD81FB005B680F /* THuadongTableViewCell.m */; };
@@ -120,6 +126,18 @@
 		A10105901FBEBF21009FD11D /* QHuadongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHuadongViewController.m; sourceTree = "<group>"; };
 		A10105921FBEE26F009FD11D /* UIScrollView+QKBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+QKBack.h"; sourceTree = "<group>"; };
 		A10105931FBEE26F009FD11D /* UIScrollView+QKBack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+QKBack.m"; sourceTree = "<group>"; };
+		A10105991FBFC62A009FD11D /* QKTourCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTourCalendarView.m; sourceTree = "<group>"; };
+		A101059A1FBFC62A009FD11D /* QKTourCalendarCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTourCalendarCollectionViewCell.m; sourceTree = "<group>"; };
+		A101059B1FBFC62A009FD11D /* QKCalendarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKCalendarModel.h; sourceTree = "<group>"; };
+		A101059C1FBFC62B009FD11D /* QKTourCalendarDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKTourCalendarDatasource.h; sourceTree = "<group>"; };
+		A101059D1FBFC62B009FD11D /* QKTourCalendarDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTourCalendarDatasource.m; sourceTree = "<group>"; };
+		A101059E1FBFC62B009FD11D /* QKTourCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKTourCalendarView.h; sourceTree = "<group>"; };
+		A101059F1FBFC62B009FD11D /* QKCalendarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKCalendarModel.m; sourceTree = "<group>"; };
+		A10105A01FBFC62B009FD11D /* QKTourCalendarCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKTourCalendarCollectionViewCell.h; sourceTree = "<group>"; };
+		A10105A51FBFC643009FD11D /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		A10105A61FBFC643009FD11D /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		A10105A81FBFC7DA009FD11D /* QKTourApplyDateMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKTourApplyDateMenuView.h; sourceTree = "<group>"; };
+		A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTourApplyDateMenuView.m; sourceTree = "<group>"; };
 		A1B930911FBD5945005B680F /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		A1B930921FBD5945005B680F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A1B930941FBD81C0005B680F /* THuadongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THuadongViewController.h; sourceTree = "<group>"; };
@@ -203,6 +221,7 @@
 				918E09781F9DCA0500882F65 /* AppDelegate.m */,
 				918E097A1F9DCA0500882F65 /* ViewController.h */,
 				918E097B1F9DCA0500882F65 /* ViewController.m */,
+				A10105981FBFC5DC009FD11D /* 日历 */,
 				91FA450D1FA83F7800C4AF82 /* dianhuaben */,
 				91FA45061FA80EB100C4AF82 /* 滑动首页 */,
 				91A653191FA456080074A051 /* dengpao */,
@@ -321,6 +340,25 @@
 				913BE8671FA8759C00BB6138 /* dianhuabenSectionModel.m */,
 			);
 			path = dianhuaben;
+			sourceTree = "<group>";
+		};
+		A10105981FBFC5DC009FD11D /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+				A101059B1FBFC62A009FD11D /* QKCalendarModel.h */,
+				A101059F1FBFC62B009FD11D /* QKCalendarModel.m */,
+				A10105A01FBFC62B009FD11D /* QKTourCalendarCollectionViewCell.h */,
+				A101059A1FBFC62A009FD11D /* QKTourCalendarCollectionViewCell.m */,
+				A101059C1FBFC62B009FD11D /* QKTourCalendarDatasource.h */,
+				A101059D1FBFC62B009FD11D /* QKTourCalendarDatasource.m */,
+				A101059E1FBFC62B009FD11D /* QKTourCalendarView.h */,
+				A10105991FBFC62A009FD11D /* QKTourCalendarView.m */,
+				A10105A51FBFC643009FD11D /* CalendarViewController.h */,
+				A10105A61FBFC643009FD11D /* CalendarViewController.m */,
+				A10105A81FBFC7DA009FD11D /* QKTourApplyDateMenuView.h */,
+				A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */,
+			);
+			path = "日历";
 			sourceTree = "<group>";
 		};
 		BAA3C3D25BA5336F06FF7A33 /* Pods */ = {
@@ -670,10 +708,13 @@
 			files = (
 				91FA45041FA80D9100C4AF82 /* BaseUITableView.m in Sources */,
 				91FA45091FA80F1B00C4AF82 /* HuaDongYemianViewController.m in Sources */,
+				A10105A21FBFC62B009FD11D /* QKTourCalendarCollectionViewCell.m in Sources */,
 				91FA45101FA83F9000C4AF82 /* dianhuabenManager.m in Sources */,
+				A10105AA1FBFC7DA009FD11D /* QKTourApplyDateMenuView.m in Sources */,
 				91D97A421FAC766E00AF9865 /* HuadongHeaderView.m in Sources */,
 				A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */,
 				918E09AB1F9DCA1100882F65 /* TYPlaceManager.m in Sources */,
+				A10105A11FBFC62B009FD11D /* QKTourCalendarView.m in Sources */,
 				918E097C1F9DCA0500882F65 /* ViewController.m in Sources */,
 				91FA45011FA70B6C00C4AF82 /* BaseViewController.m in Sources */,
 				913BE8681FA8759C00BB6138 /* dianhuabenSectionModel.m in Sources */,
@@ -682,16 +723,19 @@
 				A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */,
 				A1B9309D1FBD8543005B680F /* PersonalLeftViewController.m in Sources */,
 				91A653141FA42BBE0074A051 /* DouyuViewController.m in Sources */,
+				A10105A31FBFC62B009FD11D /* QKTourCalendarDatasource.m in Sources */,
 				A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */,
 				913BE8651FA86DA000BB6138 /* BaseTableViewDataSource.m in Sources */,
 				918E09871F9DCA0500882F65 /* main.m in Sources */,
 				A10105911FBEBF21009FD11D /* QHuadongViewController.m in Sources */,
+				A10105A41FBFC62B009FD11D /* QKCalendarModel.m in Sources */,
 				91A653181FA456030074A051 /* KaidengViewController.m in Sources */,
 				91FA44FE1FA6F0AB00C4AF82 /* JiequURLUIWebviewViewController.m in Sources */,
 				A10105941FBEE26F009FD11D /* UIScrollView+QKBack.m in Sources */,
 				91FA45131FA8406100C4AF82 /* dianhuabenModel.m in Sources */,
 				91FA450C1FA83F6A00C4AF82 /* dianhuabenViewController.m in Sources */,
 				91FA44FB1FA6B93900C4AF82 /* UITableView+NoDataView.m in Sources */,
+				A10105A71FBFC643009FD11D /* CalendarViewController.m in Sources */,
 				918E09791F9DCA0500882F65 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

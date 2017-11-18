@@ -15,10 +15,14 @@
 #else
 #define CGLog(...)
 #endif
+#define kWIDTH [UIScreen mainScreen].bounds.size.width
+#define kHEIGHT [UIScreen mainScreen].bounds.size.height
+
 
 #import <Masonry.h>
 #import "BaseViewController.h"
 #import "BaseUITableView.h"
 #import "UIScrollView+QKBack.h"
+#import <NSDate+DateTools.h>
 
 #endif /* PrefixHeader_pch */
