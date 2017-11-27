@@ -19,30 +19,6 @@
 #import "QHuadongViewController.h"
 #import "CalendarViewController.h"
 
-#import <sys/socket.h>
-#import <netinet/in.h>
-#import <arpa/inet.h>
-#import <unistd.h>
-#import <SystemConfiguration/CaptiveNetwork.h>
-#import <SystemConfiguration/SCNetworkReachability.h>
-#include <netdb.h>
-#include <ifaddrs.h>
-#include <net/if.h>
-#include <arpa/inet.h>
-#include <net/if_dl.h>
-#include <sys/socket.h>
-#include <sys/types.h>
-#import <unistd.h>
-#import <SystemConfiguration/CaptiveNetwork.h>
-#import <SystemConfiguration/SCNetworkReachability.h>
-#include <netdb.h>
-#include <ifaddrs.h>
-#include <net/if.h>
-#include <arpa/inet.h>
-#include <net/if_dl.h>
-#include <sys/ioctl.h>
-#import <DateTools.h>
-
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) NSArray *array;
