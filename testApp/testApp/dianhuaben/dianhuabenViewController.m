@@ -47,7 +47,7 @@
         
         __weak dianhuabenViewController *weakSelf = self;
         [_table setShowNoDataViewCompara:^BOOL{
-            return weakSelf.tableViewDataSource.dataArr?YES:NO;
+            return weakSelf.tableViewDataSource.dataArr.count?NO:YES;
         }];
     }
     return _table;

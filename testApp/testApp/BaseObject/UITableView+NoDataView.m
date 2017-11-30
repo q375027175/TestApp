@@ -51,7 +51,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
     [self noDataView_reloadData];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        if (self.compareBlock) {
+        if (self.compareBlock && self.compareBlock()) {
             self.noDataView.hidden = NO;
         } else {
             self.noDataView.hidden = YES;
