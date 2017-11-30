@@ -52,7 +52,6 @@
     for (NSInteger i = 0; i < weekDay2; i ++) {
         [muArr addObject:@{}];
     }
-//    CGLog(@"%@", muArr);    
 }
 
 

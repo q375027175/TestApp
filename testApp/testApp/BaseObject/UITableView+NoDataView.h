@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef BOOL (^CompareBlock)(void);
+
 @interface UITableView (NoDataView)
 
-@property (nonatomic ,strong) NSString *showMessage;
+- (void)setShowMessage:(NSString *)showMessage;
+
+- (void)setShowNoDataViewCompara:(CompareBlock) block;
 
 + (void)replaceMethod; //替换方法， AppDelegate 中运行一次
 

@@ -42,6 +42,7 @@
 		A10105A41FBFC62B009FD11D /* QKCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A101059F1FBFC62B009FD11D /* QKCalendarModel.m */; };
 		A10105A71FBFC643009FD11D /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A61FBFC643009FD11D /* CalendarViewController.m */; };
 		A10105AA1FBFC7DA009FD11D /* QKTourApplyDateMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */; };
+		A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */; };
 		A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930921FBD5945005B680F /* BaseNavigationController.m */; };
 		A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930951FBD81C0005B680F /* THuadongViewController.m */; };
 		A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930991FBD81FB005B680F /* THuadongTableViewCell.m */; };
@@ -138,6 +139,8 @@
 		A10105A61FBFC643009FD11D /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		A10105A81FBFC7DA009FD11D /* QKTourApplyDateMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKTourApplyDateMenuView.h; sourceTree = "<group>"; };
 		A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTourApplyDateMenuView.m; sourceTree = "<group>"; };
+		A10FA5141FCFAC2B009D67C8 /* TestNoDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNoDataView.h; sourceTree = "<group>"; };
+		A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNoDataView.m; sourceTree = "<group>"; };
 		A1B930911FBD5945005B680F /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		A1B930921FBD5945005B680F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A1B930941FBD81C0005B680F /* THuadongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THuadongViewController.h; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 				A1B930921FBD5945005B680F /* BaseNavigationController.m */,
 				A10105921FBEE26F009FD11D /* UIScrollView+QKBack.h */,
 				A10105931FBEE26F009FD11D /* UIScrollView+QKBack.m */,
+				A10FA5141FCFAC2B009D67C8 /* TestNoDataView.h */,
+				A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */,
 			);
 			path = BaseObject;
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 				91FA45131FA8406100C4AF82 /* dianhuabenModel.m in Sources */,
 				91FA450C1FA83F6A00C4AF82 /* dianhuabenViewController.m in Sources */,
 				91FA44FB1FA6B93900C4AF82 /* UITableView+NoDataView.m in Sources */,
+				A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */,
 				A10105A71FBFC643009FD11D /* CalendarViewController.m in Sources */,
 				918E09791F9DCA0500882F65 /* AppDelegate.m in Sources */,
 			);
