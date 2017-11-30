@@ -6,7 +6,6 @@
 //  Copyright © 2017年 juge. All rights reserved.
 //
 
-
 #import "UITableView+NoDataView.h"
 #import <objc/runtime.h>
 #import "TestNoDataView.h"
@@ -34,16 +33,12 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
     }
 }
 
-
 @interface UITableView ()
-
 @property (nonatomic, strong) TestNoDataView *noDataView;
 @property (nonatomic, copy) CompareBlock compareBlock;
-
 @end
 
 @implementation UITableView (NoDataView)
-
 + (void)replaceMethod {
     static BOOL i = NO;
     if (i) return;
