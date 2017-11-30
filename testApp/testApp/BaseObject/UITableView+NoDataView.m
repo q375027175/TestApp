@@ -80,7 +80,6 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
     TestNoDataView *noDataView = objc_getAssociatedObject(self, noDataViewKey);
     if (!noDataView) {
         noDataView = [[TestNoDataView alloc] init];
-        
         noDataView.hidden = YES;
         [self addSubview:noDataView];
         [self setNeedsLayout];
