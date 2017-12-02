@@ -24,5 +24,7 @@
 #import "BaseUITableView.h"
 #import "UIScrollView+QKBack.h"
 #import <NSDate+DateTools.h>
+#import "UIFont+Suit.h"
 
 #endif /* PrefixHeader_pch */
+

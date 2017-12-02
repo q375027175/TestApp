@@ -43,6 +43,8 @@
 		A10105A71FBFC643009FD11D /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A61FBFC643009FD11D /* CalendarViewController.m */; };
 		A10105AA1FBFC7DA009FD11D /* QKTourApplyDateMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */; };
 		A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */; };
+		A1110EF51FD247AC00414D6C /* UIFont+Suit.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF41FD247AC00414D6C /* UIFont+Suit.m */; };
+		A1110EF81FD247F500414D6C /* SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF71FD247F500414D6C /* SwizzleMethod.m */; };
 		A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930921FBD5945005B680F /* BaseNavigationController.m */; };
 		A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930951FBD81C0005B680F /* THuadongViewController.m */; };
 		A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930991FBD81FB005B680F /* THuadongTableViewCell.m */; };
@@ -141,6 +143,10 @@
 		A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTourApplyDateMenuView.m; sourceTree = "<group>"; };
 		A10FA5141FCFAC2B009D67C8 /* TestNoDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNoDataView.h; sourceTree = "<group>"; };
 		A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNoDataView.m; sourceTree = "<group>"; };
+		A1110EF31FD247AC00414D6C /* UIFont+Suit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Suit.h"; sourceTree = "<group>"; };
+		A1110EF41FD247AC00414D6C /* UIFont+Suit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Suit.m"; sourceTree = "<group>"; };
+		A1110EF61FD247F500414D6C /* SwizzleMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzleMethod.h; sourceTree = "<group>"; };
+		A1110EF71FD247F500414D6C /* SwizzleMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzleMethod.m; sourceTree = "<group>"; };
 		A1B930911FBD5945005B680F /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		A1B930921FBD5945005B680F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A1B930941FBD81C0005B680F /* THuadongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THuadongViewController.h; sourceTree = "<group>"; };
@@ -307,6 +313,10 @@
 				A10105931FBEE26F009FD11D /* UIScrollView+QKBack.m */,
 				A10FA5141FCFAC2B009D67C8 /* TestNoDataView.h */,
 				A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */,
+				A1110EF31FD247AC00414D6C /* UIFont+Suit.h */,
+				A1110EF41FD247AC00414D6C /* UIFont+Suit.m */,
+				A1110EF61FD247F500414D6C /* SwizzleMethod.h */,
+				A1110EF71FD247F500414D6C /* SwizzleMethod.m */,
 			);
 			path = BaseObject;
 			sourceTree = "<group>";
@@ -726,10 +736,12 @@
 				91A653061FA423B70074A051 /* PlaceViewController.m in Sources */,
 				91A6531C1FA4594C0074A051 /* JiequUrlViewController.m in Sources */,
 				A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */,
+				A1110EF81FD247F500414D6C /* SwizzleMethod.m in Sources */,
 				A1B9309D1FBD8543005B680F /* PersonalLeftViewController.m in Sources */,
 				91A653141FA42BBE0074A051 /* DouyuViewController.m in Sources */,
 				A10105A31FBFC62B009FD11D /* QKTourCalendarDatasource.m in Sources */,
 				A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */,
+				A1110EF51FD247AC00414D6C /* UIFont+Suit.m in Sources */,
 				913BE8651FA86DA000BB6138 /* BaseTableViewDataSource.m in Sources */,
 				918E09871F9DCA0500882F65 /* main.m in Sources */,
 				A10105911FBEBF21009FD11D /* QHuadongViewController.m in Sources */,

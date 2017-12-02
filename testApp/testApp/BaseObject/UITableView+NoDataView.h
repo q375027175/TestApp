@@ -11,8 +11,6 @@
 typedef BOOL (^CompareBlock)(void);
 
 @interface UITableView (NoDataView)
-//替换方法， AppDelegate 中运行一次
-+ (void)replaceMethod;
 
 //设置无数据展示的信息
 - (void)setShowMessage:(NSString *)showMessage;
