@@ -9,9 +9,14 @@
 #import "SwizzleMethod.h"
 #import <objc/runtime.h>
 
+/*
+ [obj class]; 获取的是类对象
+ object_getClass(class);  获取的是元类对象，也就是类对象的 isa         Class _Nonnull isa
+ */
+
 // swizzled
 void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
-    // 更改实例方法 用的是[obj class]
+    // 更改实例方法 用的是类对象
     
     Method originalMethod = class_getInstanceMethod(class, originalSelector);
     Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
@@ -32,7 +37,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
 }
 
 void swizzleClassMethod(Class class, SEL originalSelector, SEL swizzledSelector) {
-    class = object_getClass(class);   // 更改类方法必须获取到类对象而不是。  [obj class]
+    class = object_getClass(class);   // 更改类方法必须获取到元类对象而不是类对象
     
     Method originalMethod = class_getClassMethod(class, originalSelector);
     Method swizzledMethod = class_getClassMethod(class, swizzledSelector);

@@ -101,8 +101,8 @@
 }
 
 - (CGFloat)getHeight {
-    CGFloat height = (kWIDTH - 6) / 7;
-    return self.datasource.dataArr.count / 7 * height + 31;
+    CGFloat height = (kWIDTH - 6) / 7 + 1;
+    return self.datasource.dataArr.count / 7 * height + 30;
 }
 
 - (void)selectToday {

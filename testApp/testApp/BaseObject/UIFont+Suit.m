@@ -21,16 +21,24 @@
         swizzleMethod(self, @selector(fontWithSize:), @selector(suit_fontWithSize:));
         
         swizzleClassMethod(self, @selector(systemFontOfSize:), @selector(suit_systemFontOfSize:));
+        swizzleClassMethod(self, @selector(boldSystemFontOfSize:), @selector(suit_boldSystemFontOfSize:));
     });
 }
 
 + (UIFont *)suit_systemFontOfSize:(CGFloat)fontSize {
-    fontSize = 1;
+    
+    fontSize = fontSize < 768? (fontSize * kWIDTH / 375) : fontSize;
     return  [self suit_systemFontOfSize:fontSize];
 }
 
++ (UIFont *)suit_boldSystemFontOfSize:(CGFloat)fontSize {
+    
+    fontSize = fontSize < 768? (fontSize * kWIDTH / 375) : fontSize;
+    return  [self suit_boldSystemFontOfSize:fontSize];
+}
+
 - (UIFont *)suit_fontWithSize:(CGFloat)fontSize {
-    fontSize = 1;
+    fontSize = fontSize < 768? (fontSize * kWIDTH / 375) : fontSize;
     return  [self suit_fontWithSize:fontSize];
 }
 

@@ -52,6 +52,32 @@
     for (NSInteger i = 0; i < weekDay2; i ++) {
         [muArr addObject:@{}];
     }
+    
+    [self setStrings:@"A", @"B", @"C", @"D", @"E", @"F",
+     @"G", @"H", @"I", @"J", @"Q", @"L", @"M", @"N", @"O", @"P",
+     @"Q", @"I", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z",
+     nil];
+}
+
+- (void)setStrings:(NSString *)string, ...NS_REQUIRES_NIL_TERMINATION {
+    CGLog(@"传多个参数的第一个参数 %@",string);//是other1
+
+    va_list args;
+    va_start(args, string);
+    
+    if (string) {
+        NSMutableArray *muArr = [NSMutableArray arrayWithObject:string];
+        NSString *str = nil;
+        while ((str = va_arg(args, NSString *))) {
+            if (str) {
+                [muArr addObject:str];
+                CGLog(@"其他: %@", str);
+            }
+        }
+        
+        CGLog(@"muArr count = %zd", muArr.count);
+    }
+    va_end(args);
 }
 
 
