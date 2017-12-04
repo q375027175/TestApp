@@ -86,6 +86,7 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle"
   install_resource "${PODS_ROOT}/PinYin4Objc/PinYin4Objc/Resources/unicode_to_hanyu_pinyin.txt"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/VKFoundation/Assets/VKFoundation_themes.plist"
   install_resource "${PODS_ROOT}/VKFoundation/Assets/VKPickerButton_bg.png"
   install_resource "${PODS_ROOT}/VKFoundation/Assets/VKPickerButton_bg@2x.png"
@@ -124,6 +125,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/DateTools/DateTools/DateTools/DateTools.bundle"
   install_resource "${PODS_ROOT}/PinYin4Objc/PinYin4Objc/Resources/unicode_to_hanyu_pinyin.txt"
+  install_resource "${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "${PODS_ROOT}/VKFoundation/Assets/VKFoundation_themes.plist"
   install_resource "${PODS_ROOT}/VKFoundation/Assets/VKPickerButton_bg.png"
   install_resource "${PODS_ROOT}/VKFoundation/Assets/VKPickerButton_bg@2x.png"

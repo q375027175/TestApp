@@ -168,6 +168,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [AMapServices sharedServices].apiKey = @"6ed9c493b110856b3f4464839da0b8c2";
+    [Bmob registerWithAppKey:@"d7a1b5304281d7850ff594f3f76a18d9"];
     
     if (@available(iOS 11, *)) { // iOS 11 tableview 适配
         [UIScrollView appearance].contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

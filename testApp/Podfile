@@ -23,4 +23,7 @@ pod 'VKVideoPlayer'
 pod 'Masonry'
 pod 'PinYin4Objc'
 pod 'DateTools'
+pod 'BmobSDK'
+pod 'SVProgressHUD'
+
 end

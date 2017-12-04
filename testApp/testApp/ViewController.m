@@ -18,6 +18,7 @@
 #import "dianhuabenViewController.h"
 #import "QHuadongViewController.h"
 #import "CalendarViewController.h"
+#import "LoginViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -30,7 +31,7 @@
     [super viewDidLoad];
     [self setScrollToBack];
     self.title = @"首页";
-    self.array = @[@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历"];
+    self.array = @[@"登陆",@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历"];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.showMessage = @"啥也没有";
@@ -97,30 +98,34 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UIViewController *vc = nil;
-    if ([self.array[indexPath.row] isEqualToString:@"附近有啥"]) {
+    NSString *title = self.array[indexPath.row];
+    
+    if ([title isEqualToString:@"附近有啥"]) {
         vc = [[PlaceViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"直播"]) {
+    } else if ([title isEqualToString:@"直播"]) {
         vc = [[DouyuViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"手电筒"]) {
+    } else if ([title isEqualToString:@"手电筒"]) {
         vc = [[KaidengViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"解析网页"]) {
+    } else if ([title isEqualToString:@"解析网页"]) {
         vc = [[JiequUrlViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"解析网页UIWebView"]) {
+    } else if ([title isEqualToString:@"解析网页UIWebView"]) {
         vc = [[JiequURLUIWebviewViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"scroll滑动页面"]) {
+    } else if ([title isEqualToString:@"scroll滑动页面"]) {
         vc = [[HuaDongYemianViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"tableview滑动页面"]) {
+    } else if ([title isEqualToString:@"tableview滑动页面"]) {
         vc = [[THuadongViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"电话本"]) {
+    } else if ([title isEqualToString:@"电话本"]) {
         vc = [[dianhuabenViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"Q滑动页面"]) {
+    } else if ([title isEqualToString:@"Q滑动页面"]) {
         vc = [[QHuadongViewController alloc] init];
-    } else if ([self.array[indexPath.row] isEqualToString:@"日历"]) {
+    } else if ([title isEqualToString:@"日历"]) {
         vc = [[CalendarViewController alloc] init];
+    } else if ([title isEqualToString:@"登陆"]) {
+        vc = [[LoginViewController alloc] init];
     }
     
     if (vc) {
-        vc.title = self.array[indexPath.row];
+        vc.title = title;
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

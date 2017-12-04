@@ -25,6 +25,8 @@
 #import "UIScrollView+QKBack.h"
 #import <NSDate+DateTools.h>
 #import "UIFont+Suit.h"
+#import <BmobSDK/Bmob.h>
+#import <SVProgressHUD.h>
 
 #endif /* PrefixHeader_pch */
 
