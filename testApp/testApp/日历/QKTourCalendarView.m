@@ -11,11 +11,12 @@
 #import "QKTourCalendarCollectionViewCell.h"
 #import "QKCalendarModel.h"
 
-@interface QKTourCalendarView ()
+@interface QKTourCalendarView ()<QKTourCalendarDelegate>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) QKTourCalendarDatasource *datasource;
 @property (nonatomic, strong) QKCalendarModel *todayModel;
+@property (nonatomic, strong) QKCalendarModel *selectModel;
 @end
 
 @implementation QKTourCalendarView
@@ -81,6 +82,11 @@
         if ([model.date isSameDay:[NSDate date]]) {
             self.todayModel = model;
         }
+        
+        if ([model.date isSameDay:self.selectModel.date]) {
+            self.selectModel = model;
+        }
+        
         [muArr addObject:model];
     }
     
@@ -98,6 +104,8 @@
     
     self.datasource.dataArr = muArr;
     [self.collectionView reloadData];
+    
+    [self chooseSelectModel];
 }
 
 - (CGFloat)getHeight {
@@ -106,15 +114,21 @@
 }
 
 - (void)selectToday {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSInteger index = [self.datasource.dataArr indexOfObject:self.todayModel];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
+    [self SelectModelWithModel:self.todayModel];
+}
 
+- (void)chooseSelectModel {
+    if (!self.selectModel) return;
+    [self SelectModelWithModel:self.selectModel];
+}
+
+- (void)SelectModelWithModel:(QKCalendarModel *)model {
+    if(!model || ![self.datasource.dataArr containsObject:model]) return;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSInteger index = [self.datasource.dataArr indexOfObject:model];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:0];
         [self.collectionView selectItemAtIndexPath:indexPath animated:NO scrollPosition:(UICollectionViewScrollPositionNone)];
-        
-        if (self.delegate && [self.delegate respondsToSelector:@selector(tourCalendarSelectWithIndexPath:model:)]) {
-            [self.delegate tourCalendarSelectWithIndexPath:indexPath model:self.datasource.dataArr[indexPath.item]];
-        }
+        [self tourCalendarSelectWithIndexPath:indexPath model:self.datasource.dataArr[indexPath.item]];
     });
 }
 
@@ -138,6 +152,7 @@
 - (QKTourCalendarDatasource *)datasource {
     if (!_datasource) {
         _datasource = [[QKTourCalendarDatasource alloc] init];
+        _datasource.delegate = self;
     }
     return _datasource;
 }
@@ -145,7 +160,13 @@
 - (void)setDelegate:(id<QKTourCalendarDelegate>)delegate {
     if (_delegate == delegate) return;
     _delegate = delegate;
-    self.datasource.delegate = delegate;
+}
+
+- (void)tourCalendarSelectWithIndexPath:(NSIndexPath *)indexPath model:(id)model {
+    self.selectModel = model;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tourCalendarSelectWithIndexPath:model:)]) {
+        [self.delegate tourCalendarSelectWithIndexPath:indexPath model:model];
+    }
 }
 
 @end

@@ -58,6 +58,31 @@
      @"G", @"H", @"I", @"J", @"Q", @"L", @"M", @"N", @"O", @"P",
      @"Q", @"I", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z",
      nil];
+    
+    [self lock];
+    [self lock];
+}
+
+- (void)lock {
+//  NSLock
+//    static NSLock *lock = nil;
+//    if (!lock) {
+//        lock = [[NSLock alloc] init];
+//    }
+//
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        [lock lock];
+//        CGLog(@"----------------------");
+//        sleep(10);
+//        [lock unlock];
+//    });
+    
+    
+// @synchronized
+//    @synchronized(self) {
+//        CGLog(@"----------------------");
+//        sleep(10);
+//    }
 }
 
 - (void)setStrings:(NSString *)string, ...NS_REQUIRES_NIL_TERMINATION {
