@@ -4,7 +4,6 @@ PODS:
     - AMapFoundation (~> 1.4)
   - BmobSDK (2.2.3):
     - WechatOpenSDK (~> 1.7.7)
-  - CGTestPod (0.1.0)
   - CocoaLumberjack (1.7.0):
     - CocoaLumberjack/Core (= 1.7.0)
     - CocoaLumberjack/Extensions (= 1.7.0)
@@ -48,27 +47,16 @@ PODS:
 DEPENDENCIES:
   - AMapSearch
   - BmobSDK
-  - CGTestPod (from `git@github.com:q375027175/CGTestPod.git`)
   - DateTools
   - Masonry
   - PinYin4Objc
   - SVProgressHUD
   - VKVideoPlayer
 
-EXTERNAL SOURCES:
-  CGTestPod:
-    :git: git@github.com:q375027175/CGTestPod.git
-
-CHECKOUT OPTIONS:
-  CGTestPod:
-    :commit: f2ee3dec484850b8b1cb82204df5e6993198c822
-    :git: git@github.com:q375027175/CGTestPod.git
-
 SPEC CHECKSUMS:
   AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
   AMapSearch: 97042f81c1c8ea8adc4b1dadf1b1a688210aa141
   BmobSDK: dd61cf835d063303fb53b29465fcb3e9718b36f2
-  CGTestPod: 7f77e8fa76e7c5e3c9b6b17f9dafcbe24b2c5bfc
   CocoaLumberjack: a2213b8410917a1a5ecfc5c63a4206edc24d3a5b
   DateTools: 933ac9c490f21f92127cf690ccd8c397e0126caf
   DTCoreText: e5d688cffc9f6a61eddd1a4f94e2046851230de3
@@ -82,6 +70,6 @@ SPEC CHECKSUMS:
   VKVideoPlayer: 75d0c44d8cd208dd01ae397d2e75c52cfc51dd19
   WechatOpenSDK: 1fe7e3b07db860d6a936c3ff4a5aba6b890958d9
 
-PODFILE CHECKSUM: efa856a624d108519fbfd1f5e477f45a8938996d
+PODFILE CHECKSUM: 7b6201205f24baa097cf2f646dd8d15626941498
 
 COCOAPODS: 1.3.1

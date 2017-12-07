@@ -25,5 +25,5 @@ pod 'PinYin4Objc'
 pod 'DateTools'
 pod 'BmobSDK'
 pod 'SVProgressHUD'
-pod 'CGTestPod', :git => 'git@github.com:q375027175/CGTestPod.git'
+#pod 'CGTestPod', :git => 'git@github.com:q375027175/CGTestPod.git'
 end
