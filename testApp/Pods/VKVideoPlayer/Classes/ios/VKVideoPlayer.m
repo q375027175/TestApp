@@ -1295,7 +1295,7 @@ typedef enum {
       return 180;
       break;
   }
-    return 0;  
+    return 0;
 }
 
 @end
