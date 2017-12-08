@@ -33,7 +33,6 @@
 		91FA450C1FA83F6A00C4AF82 /* dianhuabenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FA450B1FA83F6100C4AF82 /* dianhuabenViewController.m */; };
 		91FA45101FA83F9000C4AF82 /* dianhuabenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FA450F1FA83F9000C4AF82 /* dianhuabenManager.m */; };
 		91FA45131FA8406100C4AF82 /* dianhuabenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 91FA45121FA8406100C4AF82 /* dianhuabenModel.m */; };
-		91FF3A471F9DF5AE005A0C19 /* TencentLBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91FF3A461F9DF5AE005A0C19 /* TencentLBS.framework */; };
 		A10105911FBEBF21009FD11D /* QHuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105901FBEBF21009FD11D /* QHuadongViewController.m */; };
 		A10105941FBEE26F009FD11D /* UIScrollView+QKBack.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105931FBEE26F009FD11D /* UIScrollView+QKBack.m */; };
 		A10105A11FBFC62B009FD11D /* QKTourCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105991FBFC62A009FD11D /* QKTourCalendarView.m */; };
@@ -51,6 +50,7 @@
 		A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930951FBD81C0005B680F /* THuadongViewController.m */; };
 		A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930991FBD81FB005B680F /* THuadongTableViewCell.m */; };
 		A1B9309D1FBD8543005B680F /* PersonalLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B9309C1FBD8543005B680F /* PersonalLeftViewController.m */; };
+		A1FF74761FD8E3340016C4E3 /* TencentLBS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FF74751FD8E3340016C4E3 /* TencentLBS.framework */; };
 		CF7187F3236F5067B25CD992 /* libPods-testAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1CD8CCC2BF0BA2F1B3F8142 /* libPods-testAppTests.a */; };
 /* End PBXBuildFile section */
 
@@ -125,7 +125,6 @@
 		91FA450F1FA83F9000C4AF82 /* dianhuabenManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dianhuabenManager.m; sourceTree = "<group>"; };
 		91FA45111FA8406100C4AF82 /* dianhuabenModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dianhuabenModel.h; sourceTree = "<group>"; };
 		91FA45121FA8406100C4AF82 /* dianhuabenModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dianhuabenModel.m; sourceTree = "<group>"; };
-		91FF3A461F9DF5AE005A0C19 /* TencentLBS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentLBS.framework; sourceTree = "<group>"; };
 		95F25937067BE1612627F0D3 /* Pods-testApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testApp/Pods-testApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A101058F1FBEBF21009FD11D /* QHuadongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHuadongViewController.h; sourceTree = "<group>"; };
 		A10105901FBEBF21009FD11D /* QHuadongViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHuadongViewController.m; sourceTree = "<group>"; };
@@ -161,6 +160,7 @@
 		A1B930991FBD81FB005B680F /* THuadongTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = THuadongTableViewCell.m; sourceTree = "<group>"; };
 		A1B9309B1FBD8542005B680F /* PersonalLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalLeftViewController.h; sourceTree = "<group>"; };
 		A1B9309C1FBD8543005B680F /* PersonalLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalLeftViewController.m; sourceTree = "<group>"; };
+		A1FF74751FD8E3340016C4E3 /* TencentLBS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentLBS.framework; sourceTree = "<group>"; };
 		B1CD8CCC2BF0BA2F1B3F8142 /* libPods-testAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8029E575A1BD62154268023 /* Pods-testAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-testAppUITests/Pods-testAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F99855FDEB52460201F6349F /* libPods-testApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-testApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,8 +172,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91FF3A471F9DF5AE005A0C19 /* TencentLBS.framework in Frameworks */,
 				2F4D0431A37585D8FAE8A6D0 /* libPods-testApp.a in Frameworks */,
+				A1FF74761FD8E3340016C4E3 /* TencentLBS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +199,7 @@
 		1BE9162012992F25B93E71F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1FF74751FD8E3340016C4E3 /* TencentLBS.framework */,
 				F99855FDEB52460201F6349F /* libPods-testApp.a */,
 				B1CD8CCC2BF0BA2F1B3F8142 /* libPods-testAppTests.a */,
 				14E45FE39990E23B72A29736 /* libPods-testAppUITests.a */,
@@ -231,7 +232,6 @@
 		918E09761F9DCA0500882F65 /* testApp */ = {
 			isa = PBXGroup;
 			children = (
-				91FF3A461F9DF5AE005A0C19 /* TencentLBS.framework */,
 				918E09771F9DCA0500882F65 /* AppDelegate.h */,
 				918E09781F9DCA0500882F65 /* AppDelegate.m */,
 				918E097A1F9DCA0500882F65 /* ViewController.h */,
@@ -945,6 +945,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testApp",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = testApp/PrefixHeader.pch;
 				INFOPLIST_FILE = testApp/Info.plist;
@@ -990,6 +991,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/testApp",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = testApp/PrefixHeader.pch;
 				INFOPLIST_FILE = testApp/Info.plist;
