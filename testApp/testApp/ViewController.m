@@ -116,7 +116,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"cell"];
+        
+        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+        gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
+        gradientLayer.locations = @[@0.0, @0.5, @1.0];
+        gradientLayer.startPoint = CGPointMake(0, 0);
+        gradientLayer.endPoint = CGPointMake(1.0, 1.0);
+        gradientLayer.frame = CGRectMake(0, 0, kWIDTH, 44);
+        [cell.layer insertSublayer:gradientLayer atIndex:0];
     }
+    
     cell.textLabel.text = self.array[indexPath.row];
     return cell;
 }

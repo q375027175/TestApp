@@ -10,7 +10,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void(^loginResult)(BOOL result);
+typedef void(^LoginResult)(BOOL result);
 
 /// command + option + /   加注释
 /**
@@ -36,7 +36,7 @@ typedef void(^loginResult)(BOOL result);
  @param model 用户信息
  @param resultBlock 返回结果
  */
-+ (void)regeistUserWithModel:(UserModel *)model result:(loginResult)resultBlock;
++ (void)regeistUserWithModel:(UserModel *)model result:(LoginResult)resultBlock;
 
 /**
  登陆接口
@@ -44,7 +44,7 @@ typedef void(^loginResult)(BOOL result);
  @param model 用户信息
  @param resultBlock 请求结果
  */
-+ (void)loginWithModel:(UserModel *)model result:(loginResult)resultBlock;
++ (void)loginWithModel:(UserModel *)model result:(LoginResult)resultBlock;
 
 /**
  更新用户信息
@@ -52,6 +52,6 @@ typedef void(^loginResult)(BOOL result);
  @param model 用户信息
  @param resultBlock 请求结果
  */
-+ (void)updateUserWithModel:(UserModel *)model result:(loginResult)resultBlock;
++ (void)updateUserWithModel:(UserModel *)model result:(LoginResult)resultBlock;
 
 @end

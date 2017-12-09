@@ -14,7 +14,7 @@
 
 @implementation UserModel
 
-+ (void)regeistUserWithModel:(UserModel *)model result:(loginResult)resultBlock{
++ (void)regeistUserWithModel:(UserModel *)model result:(LoginResult)resultBlock{
     //TODO: 注册用户，数据库添加内容
     BmobObject *gameScore = [BmobObject objectWithClassName:CGtableName];
     [gameScore setObject:model.userName forKey:CGuserName];
@@ -26,7 +26,7 @@
     }];
 }
 
-+ (void)loginWithModel:(UserModel *)model result:(loginResult)resultBlock{
++ (void)loginWithModel:(UserModel *)model result:(LoginResult)resultBlock{
     BmobQuery *bquery = [BmobQuery queryWithClassName:CGtableName];
     
     //TODO: 查询语句
@@ -62,7 +62,7 @@
     }];
 }
 
-+ (void)updateUserWithModel:(UserModel *)model result:(loginResult)resultBlock{
++ (void)updateUserWithModel:(UserModel *)model result:(LoginResult)resultBlock{
     
 }
 
