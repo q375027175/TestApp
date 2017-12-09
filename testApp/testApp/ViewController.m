@@ -59,30 +59,14 @@
      @"Q", @"I", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z",
      nil];
     
+    NSInteger x = 0;
+    
+    while ((x = x + 1) < 10) {
+        NSLog(@"~~~~~~~~~~~%zd", x);
+    }
+    
     [self lock];
     [self lock];
-}
-
-- (void)lock {
-//  NSLock
-//    static NSLock *lock = nil;
-//    if (!lock) {
-//        lock = [[NSLock alloc] init];
-//    }
-//
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        [lock lock];
-//        CGLog(@"----------------------");
-//        sleep(10);
-//        [lock unlock];
-//    });
-    
-    
-// @synchronized
-//    @synchronized(self) {
-//        CGLog(@"----------------------");
-//        sleep(10);
-//    }
 }
 
 - (void)setStrings:(NSString *)string, ...NS_REQUIRES_NIL_TERMINATION {
@@ -106,6 +90,27 @@
     va_end(args);
 }
 
+- (void)lock {
+    //  NSLock
+    static NSLock *lock = nil;
+    if (!lock) {
+        lock = [[NSLock alloc] init];
+    }
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lock];
+        CGLog(@"----------------------");
+        sleep(10);
+        [lock unlock];
+    });
+    // @synchronized
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @synchronized(self) {
+            CGLog(@"～～～～～～～～～～～～～");
+            sleep(10);
+        }
+    });
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];

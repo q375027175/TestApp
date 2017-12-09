@@ -15,6 +15,7 @@
 @implementation UserModel
 
 + (void)regeistUserWithModel:(UserModel *)model result:(loginResult)resultBlock{
+    //TODO: 注册用户，数据库添加内容
     BmobObject *gameScore = [BmobObject objectWithClassName:CGtableName];
     [gameScore setObject:model.userName forKey:CGuserName];
     [gameScore setObject:model.passWD forKey:CGpassWD];
@@ -26,10 +27,9 @@
 }
 
 + (void)loginWithModel:(UserModel *)model result:(loginResult)resultBlock{
-    //查找GameScore表
     BmobQuery *bquery = [BmobQuery queryWithClassName:CGtableName];
-    //查找GameScore表里面id为0c6db13c的数据
-
+    
+    //TODO: 查询语句
     NSString *sql = [NSString stringWithFormat:@"SELECT * FROM %@ WHERE %@ = '%@'",CGtableName, CGuserName, model.userName];
     
     [bquery queryInBackgroundWithBQL:sql block:^(BQLQueryResult *result, NSError *error) {
