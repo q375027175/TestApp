@@ -15,5 +15,4 @@
 
 - (void)refreshCollectionWithYear:(NSInteger)year month:(NSInteger)month;
 - (CGFloat)getHeight;
-- (void)selectToday;
 @end

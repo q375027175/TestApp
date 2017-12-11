@@ -15,7 +15,6 @@
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) QKTourCalendarDatasource *datasource;
-@property (nonatomic, strong) QKCalendarModel *todayModel;
 @property (nonatomic, strong) QKCalendarModel *selectModel;
 @end
 
@@ -79,12 +78,12 @@
         model.month = obj.month;
         model.date = obj;
         model.price = @"¥999";
-        if ([model.date isSameDay:[NSDate date]]) {
-            self.todayModel = model;
-        }
-        
-        if ([model.date isSameDay:self.selectModel.date]) {
+        if (!self.selectModel && [model.date isToday]) {
             self.selectModel = model;
+        } else {
+            if (self.selectModel.date && [model.date isSameDay:self.selectModel.date]) {
+                self.selectModel = model;
+            }
         }
         
         [muArr addObject:model];
@@ -111,10 +110,6 @@
 - (CGFloat)getHeight {
     CGFloat height = (kWIDTH - 6) / 7 + 1;
     return self.datasource.dataArr.count / 7 * height + 30;
-}
-
-- (void)selectToday {
-    [self SelectModelWithModel:self.todayModel];
 }
 
 - (void)chooseSelectModel {

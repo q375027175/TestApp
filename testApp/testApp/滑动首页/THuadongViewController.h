@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface THuadongViewController : UIViewController
+@interface THuadongViewController : BaseViewController
 
 @end

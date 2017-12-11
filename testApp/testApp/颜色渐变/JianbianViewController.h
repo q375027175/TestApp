@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JianbianViewController : UIViewController
+@interface JianbianViewController : BaseViewController
 
 @end

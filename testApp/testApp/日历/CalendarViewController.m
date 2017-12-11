@@ -40,7 +40,6 @@
 - (void)refreshCalendarView {
     NSDate *date = [NSDate date];
     [self.calendarView refreshCollectionWithYear:date.year month:date.month];
-    [self.calendarView selectToday];
     [self.calendarView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.menuView.mas_bottom).offset(1);
         make.left.equalTo(@0);
