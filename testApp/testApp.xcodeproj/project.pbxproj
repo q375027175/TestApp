@@ -46,6 +46,7 @@
 		A1110EF81FD247F500414D6C /* SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF71FD247F500414D6C /* SwizzleMethod.m */; };
 		A161410D1FD4E1BD007B37D3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A161410C1FD4E1BD007B37D3 /* LoginViewController.m */; };
 		A16141141FD4E527007B37D3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A16141131FD4E527007B37D3 /* UserModel.m */; };
+		A1884D8C1FDBE2F300D4ADA5 /* JianbianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */; };
 		A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930921FBD5945005B680F /* BaseNavigationController.m */; };
 		A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930951FBD81C0005B680F /* THuadongViewController.m */; };
 		A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930991FBD81FB005B680F /* THuadongTableViewCell.m */; };
@@ -152,6 +153,8 @@
 		A161410C1FD4E1BD007B37D3 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A16141121FD4E527007B37D3 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		A16141131FD4E527007B37D3 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		A1884D8A1FDBE2F300D4ADA5 /* JianbianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianbianViewController.h; sourceTree = "<group>"; };
+		A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianbianViewController.m; sourceTree = "<group>"; };
 		A1B930911FBD5945005B680F /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		A1B930921FBD5945005B680F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A1B930941FBD81C0005B680F /* THuadongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THuadongViewController.h; sourceTree = "<group>"; };
@@ -236,6 +239,7 @@
 				918E09781F9DCA0500882F65 /* AppDelegate.m */,
 				918E097A1F9DCA0500882F65 /* ViewController.h */,
 				918E097B1F9DCA0500882F65 /* ViewController.m */,
+				A1884D891FDBE2D500D4ADA5 /* 颜色渐变 */,
 				A161410E1FD4E2FA007B37D3 /* User */,
 				A10105981FBFC5DC009FD11D /* 日历 */,
 				91FA450D1FA83F7800C4AF82 /* dianhuaben */,
@@ -392,6 +396,15 @@
 				A16141131FD4E527007B37D3 /* UserModel.m */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		A1884D891FDBE2D500D4ADA5 /* 颜色渐变 */ = {
+			isa = PBXGroup;
+			children = (
+				A1884D8A1FDBE2F300D4ADA5 /* JianbianViewController.h */,
+				A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */,
+			);
+			path = "颜色渐变";
 			sourceTree = "<group>";
 		};
 		BAA3C3D25BA5336F06FF7A33 /* Pods */ = {
@@ -767,6 +780,7 @@
 				A10105911FBEBF21009FD11D /* QHuadongViewController.m in Sources */,
 				A16141141FD4E527007B37D3 /* UserModel.m in Sources */,
 				A10105A41FBFC62B009FD11D /* QKCalendarModel.m in Sources */,
+				A1884D8C1FDBE2F300D4ADA5 /* JianbianViewController.m in Sources */,
 				91A653181FA456030074A051 /* KaidengViewController.m in Sources */,
 				91FA44FE1FA6F0AB00C4AF82 /* JiequURLUIWebviewViewController.m in Sources */,
 				A10105941FBEE26F009FD11D /* UIScrollView+QKBack.m in Sources */,

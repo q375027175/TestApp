@@ -19,6 +19,7 @@
 #import "QHuadongViewController.h"
 #import "CalendarViewController.h"
 #import "LoginViewController.h"
+#import "JianbianViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -31,7 +32,7 @@
     [super viewDidLoad];
     [self setScrollToBack];
     self.title = @"首页";
-    self.array = @[@"登陆",@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历"];
+    self.array = @[@"登陆",@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历",@"颜色渐变"];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.showMessage = @"啥也没有";
@@ -116,14 +117,6 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"cell"];
-        
-        CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-        gradientLayer.colors = @[(__bridge id)[UIColor redColor].CGColor, (__bridge id)[UIColor yellowColor].CGColor, (__bridge id)[UIColor blueColor].CGColor];
-        gradientLayer.locations = @[@0.0, @0.5, @1.0];
-        gradientLayer.startPoint = CGPointMake(0, 0);
-        gradientLayer.endPoint = CGPointMake(1.0, 1.0);
-        gradientLayer.frame = CGRectMake(0, 0, kWIDTH, 44);
-        [cell.layer insertSublayer:gradientLayer atIndex:0];
     }
     
     cell.textLabel.text = self.array[indexPath.row];
@@ -161,6 +154,8 @@
         vc = [[CalendarViewController alloc] init];
     } else if ([title isEqualToString:@"登陆"]) {
         vc = [[LoginViewController alloc] init];
+    } else if ([title isEqualToString:@"颜色渐变"]) {
+        vc = [[JianbianViewController alloc] init];
     }
     
     if (vc) {
