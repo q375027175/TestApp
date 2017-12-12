@@ -126,7 +126,6 @@
     [backView addSubview:rightButton];
     if (@available(iOS 11, *)) {
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
-        
     } else {
         UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithCustomView:backView];
         UIBarButtonItem *negativeSeperator = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
