@@ -47,6 +47,7 @@
 		A161410D1FD4E1BD007B37D3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A161410C1FD4E1BD007B37D3 /* LoginViewController.m */; };
 		A16141141FD4E527007B37D3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A16141131FD4E527007B37D3 /* UserModel.m */; };
 		A1884D8C1FDBE2F300D4ADA5 /* JianbianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */; };
+		A1A99DE51FDE6EF20068E512 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A1A99DE41FDE6EF20068E512 /* Settings.bundle */; };
 		A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930921FBD5945005B680F /* BaseNavigationController.m */; };
 		A1B930961FBD81C0005B680F /* THuadongViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930951FBD81C0005B680F /* THuadongViewController.m */; };
 		A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930991FBD81FB005B680F /* THuadongTableViewCell.m */; };
@@ -155,6 +156,7 @@
 		A16141131FD4E527007B37D3 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		A1884D8A1FDBE2F300D4ADA5 /* JianbianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianbianViewController.h; sourceTree = "<group>"; };
 		A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianbianViewController.m; sourceTree = "<group>"; };
+		A1A99DE41FDE6EF20068E512 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A1B930911FBD5945005B680F /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		A1B930921FBD5945005B680F /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		A1B930941FBD81C0005B680F /* THuadongViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THuadongViewController.h; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				918E09851F9DCA0500882F65 /* Info.plist */,
 				918E09861F9DCA0500882F65 /* main.m */,
 				91A653151FA42F360074A051 /* PrefixHeader.pch */,
+				A1A99DE41FDE6EF20068E512 /* Settings.bundle */,
 			);
 			path = testApp;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1A99DE51FDE6EF20068E512 /* Settings.bundle in Resources */,
 				918E09841F9DCA0500882F65 /* LaunchScreen.storyboard in Resources */,
 				918E09811F9DCA0500882F65 /* Assets.xcassets in Resources */,
 				918E097F1F9DCA0500882F65 /* Main.storyboard in Resources */,
