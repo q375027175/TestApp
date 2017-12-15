@@ -67,7 +67,7 @@
     NSInteger x = 0;
     
     while ((x = x + 1) < 10) {
-        NSLog(@"~~~~~~~~~~~%zd", x);
+        CGLog(@"~~~~~~~~~~~%zd", x);
     }
     
     [self lock];

@@ -68,10 +68,10 @@
                         change:(NSDictionary<NSKeyValueChangeKey,id> *)change
                        context:(void *)context {
     if (((UIScrollView *)object).panGestureRecognizer.state == UIGestureRecognizerStateChanged) {
-        NSLog(@"bottomSView 滑动了");
+        CGLog(@"bottomSView 滑动了");
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PageViewGestureState" object:@"changed"];
     } else if (((UIScrollView *)object).panGestureRecognizer.state == UIGestureRecognizerStateEnded) {
-        NSLog(@"结束拖拽");
+        CGLog(@"结束拖拽");
         [[NSNotificationCenter defaultCenter] postNotificationName:@"PageViewGestureState" object:@"ended"];
     }
 }

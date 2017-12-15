@@ -66,7 +66,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSLog(@"点击left-%d",(int)indexPath.row);
+    CGLog(@"点击left-%d",(int)indexPath.row);
 }
 
 @end

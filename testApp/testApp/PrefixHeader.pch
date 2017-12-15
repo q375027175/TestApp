@@ -11,7 +11,7 @@
 
 
 #ifdef DEBUG
-#define CGLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define CGLog(fmt, ...) CGLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #define CGLog(...)
 #endif
