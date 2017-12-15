@@ -21,6 +21,7 @@
 
 @implementation UITableView (NoDataView)
 + (void)load {
+    [super load];
     static BOOL i = NO;
     if (i) return;
     i = YES;

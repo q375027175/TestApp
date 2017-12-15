@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : BaseViewController
+@protocol VCDelegate<NSObject>
+- (void)testDelegate;
+@end
+
+@interface ViewController : BaseViewController<VCDelegate>
 
 
 @end

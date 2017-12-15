@@ -28,6 +28,10 @@
 
 @implementation ViewController
 
+- (void)testDelegate {
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setScrollToBack];
@@ -119,7 +123,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:(UITableViewCellStyleSubtitle) reuseIdentifier:@"cell"];
     }
     
-    cell.textLabel.text = self.array[indexPath.row];
+    cell.textLabel.text = [self.array objectAtIndex:indexPath.row]; //self.array[indexPath.row];
     return cell;
 }
 

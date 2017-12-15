@@ -44,6 +44,8 @@
 		A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */; };
 		A1110EF51FD247AC00414D6C /* UIFont+Suit.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF41FD247AC00414D6C /* UIFont+Suit.m */; };
 		A1110EF81FD247F500414D6C /* SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF71FD247F500414D6C /* SwizzleMethod.m */; };
+		A149AFA11FE254EB00812219 /* NSObject+PerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */; };
+		A149AFA41FE2551A00812219 /* NSArray+SafeArr.m in Sources */ = {isa = PBXBuildFile; fileRef = A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */; };
 		A161410D1FD4E1BD007B37D3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A161410C1FD4E1BD007B37D3 /* LoginViewController.m */; };
 		A16141141FD4E527007B37D3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A16141131FD4E527007B37D3 /* UserModel.m */; };
 		A1884D8C1FDBE2F300D4ADA5 /* JianbianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */; };
@@ -150,6 +152,10 @@
 		A1110EF41FD247AC00414D6C /* UIFont+Suit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Suit.m"; sourceTree = "<group>"; };
 		A1110EF61FD247F500414D6C /* SwizzleMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzleMethod.h; sourceTree = "<group>"; };
 		A1110EF71FD247F500414D6C /* SwizzleMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzleMethod.m; sourceTree = "<group>"; };
+		A149AF9F1FE254EB00812219 /* NSObject+PerformSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformSelector.h"; sourceTree = "<group>"; };
+		A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformSelector.m"; sourceTree = "<group>"; };
+		A149AFA21FE2551A00812219 /* NSArray+SafeArr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeArr.h"; sourceTree = "<group>"; };
+		A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeArr.m"; sourceTree = "<group>"; };
 		A161410B1FD4E1BD007B37D3 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		A161410C1FD4E1BD007B37D3 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A16141121FD4E527007B37D3 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
@@ -331,6 +337,10 @@
 				A1110EF41FD247AC00414D6C /* UIFont+Suit.m */,
 				A1110EF61FD247F500414D6C /* SwizzleMethod.h */,
 				A1110EF71FD247F500414D6C /* SwizzleMethod.m */,
+				A149AF9F1FE254EB00812219 /* NSObject+PerformSelector.h */,
+				A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */,
+				A149AFA21FE2551A00812219 /* NSArray+SafeArr.h */,
+				A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */,
 			);
 			path = BaseObject;
 			sourceTree = "<group>";
@@ -759,6 +769,7 @@
 			files = (
 				91FA45041FA80D9100C4AF82 /* BaseUITableView.m in Sources */,
 				91FA45091FA80F1B00C4AF82 /* HuaDongYemianViewController.m in Sources */,
+				A149AFA41FE2551A00812219 /* NSArray+SafeArr.m in Sources */,
 				A10105A21FBFC62B009FD11D /* QKTourCalendarCollectionViewCell.m in Sources */,
 				91FA45101FA83F9000C4AF82 /* dianhuabenManager.m in Sources */,
 				A161410D1FD4E1BD007B37D3 /* LoginViewController.m in Sources */,
@@ -778,6 +789,7 @@
 				91A653141FA42BBE0074A051 /* DouyuViewController.m in Sources */,
 				A10105A31FBFC62B009FD11D /* QKTourCalendarDatasource.m in Sources */,
 				A1B9309A1FBD81FB005B680F /* THuadongTableViewCell.m in Sources */,
+				A149AFA11FE254EB00812219 /* NSObject+PerformSelector.m in Sources */,
 				A1110EF51FD247AC00414D6C /* UIFont+Suit.m in Sources */,
 				913BE8651FA86DA000BB6138 /* BaseTableViewDataSource.m in Sources */,
 				918E09871F9DCA0500882F65 /* main.m in Sources */,
