@@ -58,6 +58,7 @@
     for (NSInteger i = 0; i < weekDay2; i ++) {
         [muArr addObject:@{}];
     }
+//    [muArr valueForKeyPath:@""];
     
     [self setStrings:@"A", @"B", @"C", @"D", @"E", @"F",
      @"G", @"H", @"I", @"J", @"Q", @"L", @"M", @"N", @"O", @"P",
@@ -67,7 +68,7 @@
     NSInteger x = 0;
     
     while ((x = x + 1) < 10) {
-        CGLog(@"~~~~~~~~~~~%zd", x);
+//        CGLog(@"~~~~~~~~~~~%zd", x);
     }
     
     [self lock];

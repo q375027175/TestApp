@@ -119,6 +119,9 @@
         _scroll.showsHorizontalScrollIndicator = NO;
         _scroll.showsVerticalScrollIndicator = NO;
         _scroll.contentSize = CGSizeMake(self.frame.size.width * 3, self.frame.size.height);
+        for (UIGestureRecognizer *ges in _scroll.gestureRecognizers) {
+            ges.cancelsTouchesInView = NO;
+        }
     }
     return _scroll;
 }
@@ -167,6 +170,26 @@
         self.scroll.scrollEnabled = YES;
     }
     return _imgArr;
+}
+// 开始触摸时就会调用一次这个方法
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"摸我干啥！");
+}
+// 手指移动就会调用这个方法
+// 这个方法调用非常频繁
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"哎呀，不要拽人家！");
+    UITouch *touch = touches.anyObject;
+    
+    CGLog(@"%zd", touches.count);
+}
+// 手指离开屏幕时就会调用一次这个方法
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"手放开还能继续玩耍！");
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
 }
 
 @end

@@ -41,6 +41,7 @@
 		A10105A41FBFC62B009FD11D /* QKCalendarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A101059F1FBFC62B009FD11D /* QKCalendarModel.m */; };
 		A10105A71FBFC643009FD11D /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A61FBFC643009FD11D /* CalendarViewController.m */; };
 		A10105AA1FBFC7DA009FD11D /* QKTourApplyDateMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */; };
+		A103685F1FEA5BC000417CA2 /* UIScrollView+GoBack.m in Sources */ = {isa = PBXBuildFile; fileRef = A103685E1FEA5BC000417CA2 /* UIScrollView+GoBack.m */; };
 		A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */; };
 		A1110EF51FD247AC00414D6C /* UIFont+Suit.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF41FD247AC00414D6C /* UIFont+Suit.m */; };
 		A1110EF81FD247F500414D6C /* SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF71FD247F500414D6C /* SwizzleMethod.m */; };
@@ -146,6 +147,9 @@
 		A10105A61FBFC643009FD11D /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		A10105A81FBFC7DA009FD11D /* QKTourApplyDateMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QKTourApplyDateMenuView.h; sourceTree = "<group>"; };
 		A10105A91FBFC7DA009FD11D /* QKTourApplyDateMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QKTourApplyDateMenuView.m; sourceTree = "<group>"; };
+		A103685D1FEA5BC000417CA2 /* UIScrollView+GoBack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GoBack.h"; sourceTree = "<group>"; };
+		A103685E1FEA5BC000417CA2 /* UIScrollView+GoBack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GoBack.m"; sourceTree = "<group>"; };
+		A10368601FEB7F7400417CA2 /* TestAppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestAppDefine.h; sourceTree = "<group>"; };
 		A10FA5141FCFAC2B009D67C8 /* TestNoDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestNoDataView.h; sourceTree = "<group>"; };
 		A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestNoDataView.m; sourceTree = "<group>"; };
 		A1110EF31FD247AC00414D6C /* UIFont+Suit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Suit.h"; sourceTree = "<group>"; };
@@ -262,6 +266,7 @@
 				918E09851F9DCA0500882F65 /* Info.plist */,
 				918E09861F9DCA0500882F65 /* main.m */,
 				91A653151FA42F360074A051 /* PrefixHeader.pch */,
+				A10368601FEB7F7400417CA2 /* TestAppDefine.h */,
 				A1A99DE41FDE6EF20068E512 /* Settings.bundle */,
 			);
 			path = testApp;
@@ -341,6 +346,8 @@
 				A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */,
 				A149AFA21FE2551A00812219 /* NSArray+SafeArr.h */,
 				A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */,
+				A103685D1FEA5BC000417CA2 /* UIScrollView+GoBack.h */,
+				A103685E1FEA5BC000417CA2 /* UIScrollView+GoBack.m */,
 			);
 			path = BaseObject;
 			sourceTree = "<group>";
@@ -801,6 +808,7 @@
 				91FA44FE1FA6F0AB00C4AF82 /* JiequURLUIWebviewViewController.m in Sources */,
 				A10105941FBEE26F009FD11D /* UIScrollView+QKBack.m in Sources */,
 				91FA45131FA8406100C4AF82 /* dianhuabenModel.m in Sources */,
+				A103685F1FEA5BC000417CA2 /* UIScrollView+GoBack.m in Sources */,
 				91FA450C1FA83F6A00C4AF82 /* dianhuabenViewController.m in Sources */,
 				91FA44FB1FA6B93900C4AF82 /* UITableView+NoDataView.m in Sources */,
 				A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */,

@@ -23,6 +23,7 @@
         make.bottom.equalTo(self.view.mas_centerY);
     }];
     
+    
     UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
     [button addTarget:self action:@selector(getZiyuan) forControlEvents:(UIControlEventTouchUpInside)];
     [button setBackgroundColor:[UIColor blueColor]];
@@ -78,7 +79,8 @@
 }
 
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
-    
+    CGLog(@"%@",message.name);
+    CGLog(@"%@",message.body);
 }
 
 
@@ -95,21 +97,25 @@
 /// 3 页面加载完成之后调用
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     self.textView.text = [NSString stringWithFormat:@"%@\n\n加载完成",self.textView.text];
-    [self.webview evaluateJavaScript:@"document.body.outerHTML" completionHandler:^(id _Nullable htmlStr, NSError * _Nullable error) {
-        self.textView.text = [NSString stringWithFormat:@"%@\n\n%@",self.textView.text,htmlStr];
-    }];
-    
-    [self.webview evaluateJavaScript:@"document.getElementsByTagName('p')" completionHandler:^(id _Nullable htmlStr, NSError * _Nullable error) {
-        CGLog(@"~~~~~~~~~~%@",htmlStr);
-    }];
-    
-    [self.webview evaluateJavaScript:@"all[1]" completionHandler:^(id _Nullable htmlStr, NSError * _Nullable error) {
-        CGLog(@"~~~~~~~~~~%@",htmlStr);
-    }];
+//    [self.webview evaluateJavaScript:@"document.body.outerHTML" completionHandler:^(id _Nullable htmlStr, NSError * _Nullable error) {
+//        self.textView.text = [NSString stringWithFormat:@"%@\n\n%@",self.textView.text,htmlStr];
+//    }];
+//    
+//    [self.webview evaluateJavaScript:@"document.getElementsByTagName('p')" completionHandler:^(id _Nullable htmlStr, NSError * _Nullable error) {
+//        CGLog(@"~~~~~~~~~~%@",htmlStr);
+//    }];
+//    
+//    [self.webview evaluateJavaScript:@"all[1]" completionHandler:^(id _Nullable htmlStr, NSError * _Nullable error) {
+//        CGLog(@"~~~~~~~~~~%@",htmlStr);
+//    }];
 }
 /// 4 页面加载失败时调用
 - (void)webView:(WKWebView *)webView didFailProvisionalNavigation:(WKNavigation *)navigation {
     self.textView.text = [NSString stringWithFormat:@"%@\n\n加载失败",self.textView.text];
+}
+
+- (void)dealloc {
+    
 }
 
 @end
