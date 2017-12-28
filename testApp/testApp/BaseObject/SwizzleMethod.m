@@ -9,6 +9,9 @@
 #import "SwizzleMethod.h"
 #import <objc/runtime.h>
 
+typedef id(* _IMP)(id, SEL,...);
+typedef void(* _VIMP)(id, SEL,...);
+
 /*
  [obj class]; 获取的是类对象
  object_getClass(class);  获取的是元类对象，也就是类对象的 isa         Class _Nonnull isa
@@ -55,5 +58,18 @@ void swizzleClassMethod(Class class, SEL originalSelector, SEL swizzledSelector)
         // 添加失败，表明已经有这个方法，直接交换
         method_exchangeImplementations(originalMethod, swizzledMethod);
     }
+}
+
+void swizzleMehod(Class class, SEL originalSelector, id _Nonnull block) {
+    Method originalMethod = class_getInstanceMethod(class, originalSelector);
+
+    _VIMP originalIMP = (_VIMP)class_getMethodImplementation(class, originalSelector);
+    method_setImplementation(originalMethod, imp_implementationWithBlock(block));
+    
+    
+    method_setImplementation(originalMethod, imp_implementationWithBlock(^(id target, SEL action){
+        originalIMP(target, action);// 调用被替换掉的方法
+        
+    }));
 }
 
