@@ -125,6 +125,7 @@
     }
     
     cell.textLabel.text = [self.array objectAtIndex:indexPath.row]; //self.array[indexPath.row];
+    
     return cell;
 }
 

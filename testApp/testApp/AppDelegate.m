@@ -196,6 +196,19 @@
     }
 }
 
+//如果iOS版本低于9.0，会在下面方法接受到在地址栏输入的字符串
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"sourceApplication->%@", [url absoluteString]] message:nil delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+    return YES;
+}
+//如果iOS版本是9.0及以上的，会在下面方法接受到在地址栏输入的字符串
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+    [[[UIAlertView alloc] initWithTitle:[NSString stringWithFormat:@"openURL->%@", [url absoluteString]] message:nil delegate:nil cancelButtonTitle:@"ok" otherButtonTitles:nil] show];
+    return YES;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
