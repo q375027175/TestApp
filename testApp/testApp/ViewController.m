@@ -20,6 +20,7 @@
 #import "CalendarViewController.h"
 #import "LoginViewController.h"
 #import "JianbianViewController.h"
+#import "CGUtlis.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -73,6 +74,12 @@
     
     [self lock];
     [self lock];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        float freeDisk = [CGUtlis diskOfFreeSizeMBytes];
+        float allDisk = [CGUtlis diskOfAllSizeMBytes];
+        CGLog(@"%.2f \n %.2f", allDisk, freeDisk);
+    });
 }
 
 - (void)setStrings:(NSString *)string, ...NS_REQUIRES_NIL_TERMINATION {

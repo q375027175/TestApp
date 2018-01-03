@@ -47,6 +47,7 @@
 		A1110EF81FD247F500414D6C /* SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF71FD247F500414D6C /* SwizzleMethod.m */; };
 		A149AFA11FE254EB00812219 /* NSObject+PerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */; };
 		A149AFA41FE2551A00812219 /* NSArray+SafeArr.m in Sources */ = {isa = PBXBuildFile; fileRef = A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */; };
+		A14FEAFF1FFCD24B00E2B998 /* CGUtlis.m in Sources */ = {isa = PBXBuildFile; fileRef = A14FEAFE1FFCD24B00E2B998 /* CGUtlis.m */; };
 		A161410D1FD4E1BD007B37D3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A161410C1FD4E1BD007B37D3 /* LoginViewController.m */; };
 		A16141141FD4E527007B37D3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A16141131FD4E527007B37D3 /* UserModel.m */; };
 		A1884D8C1FDBE2F300D4ADA5 /* JianbianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */; };
@@ -160,6 +161,8 @@
 		A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformSelector.m"; sourceTree = "<group>"; };
 		A149AFA21FE2551A00812219 /* NSArray+SafeArr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeArr.h"; sourceTree = "<group>"; };
 		A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+SafeArr.m"; sourceTree = "<group>"; };
+		A14FEAFD1FFCD24B00E2B998 /* CGUtlis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGUtlis.h; sourceTree = "<group>"; };
+		A14FEAFE1FFCD24B00E2B998 /* CGUtlis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGUtlis.m; sourceTree = "<group>"; };
 		A161410B1FD4E1BD007B37D3 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		A161410C1FD4E1BD007B37D3 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A16141121FD4E527007B37D3 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */,
 				A103685D1FEA5BC000417CA2 /* UIScrollView+GoBack.h */,
 				A103685E1FEA5BC000417CA2 /* UIScrollView+GoBack.m */,
+				A14FEAFD1FFCD24B00E2B998 /* CGUtlis.h */,
+				A14FEAFE1FFCD24B00E2B998 /* CGUtlis.m */,
 			);
 			path = BaseObject;
 			sourceTree = "<group>";
@@ -809,6 +814,7 @@
 				A10105941FBEE26F009FD11D /* UIScrollView+QKBack.m in Sources */,
 				91FA45131FA8406100C4AF82 /* dianhuabenModel.m in Sources */,
 				A103685F1FEA5BC000417CA2 /* UIScrollView+GoBack.m in Sources */,
+				A14FEAFF1FFCD24B00E2B998 /* CGUtlis.m in Sources */,
 				91FA450C1FA83F6A00C4AF82 /* dianhuabenViewController.m in Sources */,
 				91FA44FB1FA6B93900C4AF82 /* UITableView+NoDataView.m in Sources */,
 				A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */,

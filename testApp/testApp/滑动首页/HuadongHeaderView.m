@@ -179,10 +179,8 @@
 // 这个方法调用非常频繁
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"哎呀，不要拽人家！");
-    UITouch *touch = touches.anyObject;
-    
-    CGLog(@"%zd", touches.count);
 }
+
 // 手指离开屏幕时就会调用一次这个方法
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     NSLog(@"手放开还能继续玩耍！");
