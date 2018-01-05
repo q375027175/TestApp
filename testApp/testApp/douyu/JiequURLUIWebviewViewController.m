@@ -52,7 +52,8 @@
     }
     self.textView.editable = NO;
     NSURL *url = [NSURL URLWithString:self.textView.text];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
+    // 缓存策略
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:30];
     self.webview.hidden = NO;
     
     [self.webview loadRequest:request];
