@@ -24,6 +24,7 @@
         selectedView.backgroundColor = [UIColor redColor];
         self.selectedBackgroundView = selectedView;
         [self.contentView addSubview:self.title];
+        
         [self.title mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.equalTo(@0);
         }];

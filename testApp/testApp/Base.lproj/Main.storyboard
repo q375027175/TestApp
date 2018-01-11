@@ -55,5 +55,81 @@
             </objects>
             <point key="canvasLocation" x="76" y="134"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="11I-WK-OXq">
+            <objects>
+                <viewController id="hho-6w-rxh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fW8-1r-fhn"/>
+                        <viewControllerLayoutGuide type="bottom" id="iZq-Yx-kNG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L2O-do-uJL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" image="home_default2" translatesAutoresizingMaskIntoConstraints="NO" id="THa-8W-m2E">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buU-4Z-sm8">
+                                <rect key="frame" x="78" y="160" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJa-2U-k6d">
+                                <rect key="frame" x="229" y="255" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37889989979694533" green="0.87848121761658027" blue="0.073798821540236606" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHw-zD-6YR">
+                                <rect key="frame" x="150" y="92" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEG-ZT-8lY">
+                                <rect key="frame" x="150" y="155" width="152" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p89-Vk-C8C">
+                                <rect key="frame" x="78" y="97" width="35" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPI-mt-noy">
+                                <rect key="frame" x="78" y="255" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.37889989979694533" green="0.87848121761658027" blue="0.073798821540236606" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="登陆">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="THa-8W-m2E" firstAttribute="top" secondItem="L2O-do-uJL" secondAttribute="top" id="5IG-c5-rpg"/>
+                            <constraint firstItem="THa-8W-m2E" firstAttribute="leading" secondItem="L2O-do-uJL" secondAttribute="leading" id="84h-vj-vgR"/>
+                            <constraint firstAttribute="trailing" secondItem="THa-8W-m2E" secondAttribute="trailing" id="SRh-6p-ZAg"/>
+                            <constraint firstItem="iZq-Yx-kNG" firstAttribute="top" secondItem="THa-8W-m2E" secondAttribute="bottom" id="mRc-Rc-Ave"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mOc-Qa-X3t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.79999999999995" y="133.5832083958021"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="home_default2" width="375" height="160"/>
+    </resources>
 </document>
