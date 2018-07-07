@@ -45,11 +45,13 @@
 		A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = A10FA5151FCFAC2B009D67C8 /* TestNoDataView.m */; };
 		A1110EF51FD247AC00414D6C /* UIFont+Suit.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF41FD247AC00414D6C /* UIFont+Suit.m */; };
 		A1110EF81FD247F500414D6C /* SwizzleMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = A1110EF71FD247F500414D6C /* SwizzleMethod.m */; };
+		A112FD4A208F025400D519F2 /* CGWaterWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = A112FD49208F025400D519F2 /* CGWaterWaveView.m */; };
 		A149AFA11FE254EB00812219 /* NSObject+PerformSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */; };
 		A149AFA41FE2551A00812219 /* NSArray+SafeArr.m in Sources */ = {isa = PBXBuildFile; fileRef = A149AFA31FE2551A00812219 /* NSArray+SafeArr.m */; };
 		A14FEAFF1FFCD24B00E2B998 /* CGUtlis.m in Sources */ = {isa = PBXBuildFile; fileRef = A14FEAFE1FFCD24B00E2B998 /* CGUtlis.m */; };
 		A161410D1FD4E1BD007B37D3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A161410C1FD4E1BD007B37D3 /* LoginViewController.m */; };
 		A16141141FD4E527007B37D3 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A16141131FD4E527007B37D3 /* UserModel.m */; };
+		A16649062020113A00938F13 /* NSData+Aes.m in Sources */ = {isa = PBXBuildFile; fileRef = A16649052020113900938F13 /* NSData+Aes.m */; };
 		A1884D8C1FDBE2F300D4ADA5 /* JianbianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */; };
 		A1A99DE51FDE6EF20068E512 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A1A99DE41FDE6EF20068E512 /* Settings.bundle */; };
 		A1B930931FBD5945005B680F /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B930921FBD5945005B680F /* BaseNavigationController.m */; };
@@ -157,6 +159,8 @@
 		A1110EF41FD247AC00414D6C /* UIFont+Suit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Suit.m"; sourceTree = "<group>"; };
 		A1110EF61FD247F500414D6C /* SwizzleMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwizzleMethod.h; sourceTree = "<group>"; };
 		A1110EF71FD247F500414D6C /* SwizzleMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwizzleMethod.m; sourceTree = "<group>"; };
+		A112FD48208F025400D519F2 /* CGWaterWaveView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CGWaterWaveView.h; sourceTree = "<group>"; };
+		A112FD49208F025400D519F2 /* CGWaterWaveView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CGWaterWaveView.m; sourceTree = "<group>"; };
 		A149AF9F1FE254EB00812219 /* NSObject+PerformSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+PerformSelector.h"; sourceTree = "<group>"; };
 		A149AFA01FE254EB00812219 /* NSObject+PerformSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PerformSelector.m"; sourceTree = "<group>"; };
 		A149AFA21FE2551A00812219 /* NSArray+SafeArr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+SafeArr.h"; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 		A161410C1FD4E1BD007B37D3 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		A16141121FD4E527007B37D3 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		A16141131FD4E527007B37D3 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		A16649042020113900938F13 /* NSData+Aes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Aes.h"; sourceTree = "<group>"; };
+		A16649052020113900938F13 /* NSData+Aes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Aes.m"; sourceTree = "<group>"; };
 		A1884D8A1FDBE2F300D4ADA5 /* JianbianViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JianbianViewController.h; sourceTree = "<group>"; };
 		A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JianbianViewController.m; sourceTree = "<group>"; };
 		A1A99DE41FDE6EF20068E512 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -251,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				918E09771F9DCA0500882F65 /* AppDelegate.h */,
+				A16649042020113900938F13 /* NSData+Aes.h */,
+				A16649052020113900938F13 /* NSData+Aes.m */,
 				918E09781F9DCA0500882F65 /* AppDelegate.m */,
 				918E097A1F9DCA0500882F65 /* ViewController.h */,
 				918E097B1F9DCA0500882F65 /* ViewController.m */,
@@ -428,6 +436,8 @@
 			children = (
 				A1884D8A1FDBE2F300D4ADA5 /* JianbianViewController.h */,
 				A1884D8B1FDBE2F300D4ADA5 /* JianbianViewController.m */,
+				A112FD48208F025400D519F2 /* CGWaterWaveView.h */,
+				A112FD49208F025400D519F2 /* CGWaterWaveView.m */,
 			);
 			path = "颜色渐变";
 			sourceTree = "<group>";
@@ -813,10 +823,12 @@
 				91FA44FE1FA6F0AB00C4AF82 /* JiequURLUIWebviewViewController.m in Sources */,
 				A10105941FBEE26F009FD11D /* UIScrollView+QKBack.m in Sources */,
 				91FA45131FA8406100C4AF82 /* dianhuabenModel.m in Sources */,
+				A112FD4A208F025400D519F2 /* CGWaterWaveView.m in Sources */,
 				A103685F1FEA5BC000417CA2 /* UIScrollView+GoBack.m in Sources */,
 				A14FEAFF1FFCD24B00E2B998 /* CGUtlis.m in Sources */,
 				91FA450C1FA83F6A00C4AF82 /* dianhuabenViewController.m in Sources */,
 				91FA44FB1FA6B93900C4AF82 /* UITableView+NoDataView.m in Sources */,
+				A16649062020113A00938F13 /* NSData+Aes.m in Sources */,
 				A10FA5161FCFAC2B009D67C8 /* TestNoDataView.m in Sources */,
 				A10105A71FBFC643009FD11D /* CalendarViewController.m in Sources */,
 				918E09791F9DCA0500882F65 /* AppDelegate.m in Sources */,
@@ -993,7 +1005,7 @@
 				);
 				GCC_PREFIX_HEADER = testApp/PrefixHeader.pch;
 				INFOPLIST_FILE = testApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1039,7 +1051,7 @@
 				);
 				GCC_PREFIX_HEADER = testApp/PrefixHeader.pch;
 				INFOPLIST_FILE = testApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
