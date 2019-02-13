@@ -176,10 +176,23 @@
 
     ViewController *vc = [[ViewController alloc] init];
     self.window.rootViewController = [vc getNavigationConller];
+    
+    
+    // 后台刷新
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:UIApplicationBackgroundFetchIntervalMinimum];
+    
+    
+    if ([[UIApplication sharedApplication] backgroundRefreshStatus] != UIBackgroundRefreshStatusAvailable)
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil message:@"您没有开启后台刷新，请在 设置->通用->应用程序后台刷新 中开启." delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alertView show];
+    }
+
     return YES;
 }
 
 - (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler {
+    
     UIViewController *vc = nil;
     if ([shortcutItem.type isEqualToString:@"location.test.com.testApp"]) {
         vc = [[PlaceViewController alloc] init];
@@ -194,6 +207,9 @@
         UINavigationController *nav = (UINavigationController *)self.window.rootViewController;
         [nav pushViewController:vc animated:YES];
     }
+    
+    completionHandler(UIBackgroundFetchResultNewData);
+
 }
 
 //如果iOS版本低于9.0，会在下面方法接受到在地址栏输入的字符串

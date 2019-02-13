@@ -8,6 +8,7 @@
 
 #import "DouyuViewController.h"
 #import <VKVideoPlayer/VKVideoPlayerViewController.h>
+#import "NSString+MD5.h"
 
 @interface DouyuViewController () <UITableViewDelegate, UITableViewDataSource, VKVideoPlayerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -28,6 +29,13 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
+    
+    NSString *roomId = @"288016";
+    long long time = [[NSDate date] timeIntervalSince1970];
+    NSString *auth = [NSString stringWithFormat:@"room/%@?aid=ios&clientsys=ios&time=%lld", roomId, time];
+    NSString *url = [NSString stringWithFormat:@"http://capi.douyucdn.cn/api/v1/room/%@?aid=ios&client_sys=ios&time=%lld&auth=%@", roomId, time, [auth md5]];
+    
+    self.array = @[url];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

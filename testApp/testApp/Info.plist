@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NFCReaderUsageDescription</key>
+	<string>用用你的NFC</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -46,11 +48,38 @@
 	<string>qwe1231231</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>684614354654</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>是否允许桩多多访问媒体库?</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>是否允许桩多多访问蓝牙?以便于更好的使用充电桩</string>
+	<key>NSCameraUsageDescription</key>
+	<string>是否允许桩多多使用您的相机，以便于设置您的头像或扫描二维码</string>
+	<key>NSContactsUsageDescription</key>
+	<string>是否允许桩多多读取通讯录信息？以便于把桩多多分享给他人</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>始终允许访问位置信息，以便于您使用附近的充电桩</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>始终允许访问位置信息，以便于您使用附近的充电桩</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>始终允许访问位置信息，以便于您使用附近的充电桩</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>是否允许桩多多使用你的麦克风？</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>是否允许桩多多访问相册，以便于设置您的头像或扫描二维码</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>是否允许桩多多访问提醒事项？</string>
+	<key>NSSiriUsageDescription</key>
+	<string>是否允许桩多多使用Siri？</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>是否允许桩多多使用语音识别？</string>
+	<key>Privacy - Calendars Usage Description </key>
+	<string>是否允许桩多多使用日历？</string>
+
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string></string>
+			<string>AppIcon</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeLocation</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
@@ -74,7 +103,7 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string></string>
+			<string>ceshi</string>
 			<key>UIApplicationShortcutItemIconType</key>
 			<string>UIApplicationShortcutIconTypeLocation</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
@@ -99,6 +128,7 @@
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
+		<string>fetch</string>
 		<string>location</string>
 	</array>
 	<key>UILaunchStoryboardName</key>

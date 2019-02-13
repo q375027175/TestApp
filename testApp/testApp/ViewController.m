@@ -24,6 +24,8 @@
 #import "NSData+Aes.h"
 #import <CommonCrypto/CommonDigest.h>
 #import "CGWaterWaveView.h"
+#import "NFCViewController.h"
+#import "HeartBeatViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
@@ -88,58 +90,58 @@
     
     CGLog(@"%@", [self token]);
     self.title = @"首页";
-    self.array = @[@"登陆",@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历",@"颜色渐变"];
+    self.array = @[@"登陆",@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历",@"颜色渐变", @"NFC", @"心跳"];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.tableView];
     self.tableView.showMessage = @"啥也没有";
     [self.tableView reloadData];
     
-    NSDate *date = [NSDate date];
-    NSMutableArray *muArr = [NSMutableArray array];
-    for (NSInteger i = 1; i <= date.daysInMonth; i ++) {
-        NSDate *firstDate = [NSDate dateWithYear:date.year month:date.month day:i];
-        [muArr addObject:@{@"days":@(i), @"weekday":@(firstDate.weekday)}];
-    }
+//    NSDate *date = [NSDate date];
+//    NSMutableArray *muArr = [NSMutableArray array];
+//    for (NSInteger i = 1; i <= date.daysInMonth; i ++) {
+//        NSDate *firstDate = [NSDate dateWithYear:date.year month:date.month day:i];
+//        [muArr addObject:@{@"days":@(i), @"weekday":@(firstDate.weekday)}];
+//    }
+//    
+//    NSInteger weekDay1 = 7 - [muArr.firstObject[@"weekday"] integerValue];
+//    for (NSInteger i = 0; i < weekDay1; i ++) {
+//        [muArr insertObject:@{} atIndex:0];
+//    }
+//    
+//    NSInteger weekDay2 = 7 - [muArr.lastObject[@"weekday"] integerValue];
+//    for (NSInteger i = 0; i < weekDay2; i ++) {
+//        [muArr addObject:@{}];
+//    }
+//    
+//    [self setStrings:@"A", @"B", @"C", @"D", @"E", @"F",
+//     @"G", @"H", @"I", @"J", @"Q", @"L", @"M", @"N", @"O", @"P",
+//     @"Q", @"I", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z",
+//      nil];
+//    
+//    NSInteger x = 0;
+//    
+//    while ((x = x + 1) < 10) {
+////        CGLog(@"~~~~~~~~~~~%zd", x);
+//    }
     
-    NSInteger weekDay1 = 7 - [muArr.firstObject[@"weekday"] integerValue];
-    for (NSInteger i = 0; i < weekDay1; i ++) {
-        [muArr insertObject:@{} atIndex:0];
-    }
+//    [self lock];
+//    [self lock];
     
-    NSInteger weekDay2 = 7 - [muArr.lastObject[@"weekday"] integerValue];
-    for (NSInteger i = 0; i < weekDay2; i ++) {
-        [muArr addObject:@{}];
-    }
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        float freeDisk = [CGUtlis diskOfFreeSizeMBytes];
+//        float allDisk = [CGUtlis diskOfAllSizeMBytes];
+//        CGLog(@"%.2f \n %.2f", allDisk, freeDisk);
+//    });
     
-    [self setStrings:@"A", @"B", @"C", @"D", @"E", @"F",
-     @"G", @"H", @"I", @"J", @"Q", @"L", @"M", @"N", @"O", @"P",
-     @"Q", @"I", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z",
-     nil];
-    
-    NSInteger x = 0;
-    
-    while ((x = x + 1) < 10) {
-//        CGLog(@"~~~~~~~~~~~%zd", x);
-    }
-    
-    [self lock];
-    [self lock];
-    
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        float freeDisk = [CGUtlis diskOfFreeSizeMBytes];
-        float allDisk = [CGUtlis diskOfAllSizeMBytes];
-        CGLog(@"%.2f \n %.2f", allDisk, freeDisk);
-    });
-    
-    CGWaterWaveView *wave = [[CGWaterWaveView alloc] init];
-    wave.frame = CGRectMake(50, 50, 200, 200);
-    wave.center = CGPointMake(kWIDTH / 2, kHEIGHT / 2);
-    [self.view addSubview:wave];
-    [wave startWaveToPercent:1];
-    
-    [NSTimer scheduledTimerWithTimeInterval:5 repeats:NO block:^(NSTimer * _Nonnull timer) {
-        [wave removeFromSuperview];
-    }];
+//    CGWaterWaveView *wave = [[CGWaterWaveView alloc] init];
+//    wave.frame = CGRectMake(50, 50, 200, 200);
+//    wave.center = CGPointMake(kWIDTH / 2, kHEIGHT / 2);
+//    [self.view addSubview:wave];
+//    [wave startWaveToPercent:1];
+//
+//    [NSTimer scheduledTimerWithTimeInterval:5 repeats:NO block:^(NSTimer * _Nonnull timer) {
+//        [wave removeFromSuperview];
+//    }];
 }
 
 - (void)setStrings:(NSString *)string, ...NS_REQUIRES_NIL_TERMINATION {
@@ -207,6 +209,9 @@
     
     if ([title isEqualToString:@"附近有啥"]) {
         vc = [[PlaceViewController alloc] init];
+//        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+//        [self presentViewController:vc animated:YES completion:nil];
+//        return;
     } else if ([title isEqualToString:@"直播"]) {
         vc = [[DouyuViewController alloc] init];
     } else if ([title isEqualToString:@"手电筒"]) {
@@ -229,6 +234,10 @@
         vc = [[LoginViewController alloc] init];
     } else if ([title isEqualToString:@"颜色渐变"]) {
         vc = [[JianbianViewController alloc] init];
+    } else if ([title isEqualToString:@"NFC"]) {
+        vc = [[NFCViewController alloc] init];
+    } else if ([title isEqualToString:@"心跳"]) {
+        vc = [[HeartBeatViewController alloc] init];
     }
     
     if (vc) {
