@@ -86,8 +86,7 @@
         
     }
 //    return;
-    
-    
+
     CGLog(@"%@", [self token]);
     self.title = @"首页";
     self.array = @[@"登陆",@"附近有啥", @"直播",@"手电筒",@"解析网页",@"解析网页UIWebView",@"scroll滑动页面", @"tableview滑动页面", @"Q滑动页面", @"电话本", @"日历",@"颜色渐变", @"NFC", @"心跳"];
